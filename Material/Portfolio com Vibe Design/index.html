@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucas Petry | Data Analyst Specialist</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Scripts -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <style>
+        /* Hero Specific Styles */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 8rem;
+            position: relative;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 6rem;
+            align-items: center;
+            width: 100%;
+        }
+
+        .hero-text {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+
+        .headline {
+            font-family: var(--font-display);
+            font-size: clamp(3rem, 6vw, 5rem);
+            font-weight: 200;
+            line-height: 1.1;
+            letter-spacing: -0.01em;
+            text-transform: none;
+            max-width: 800px;
+        }
+
+        .headline span {
+            color: var(--primary);
+            font-weight: 300;
+            position: relative;
+        }
+
+        .headline span::after {
+            content: '';
+            position: absolute;
+            bottom: 0.1em;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: var(--primary);
+            opacity: 0.3;
+        }
+
+        .subheadline {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 520px;
+            font-weight: 300;
+            line-height: 1.6;
+        }
+
+        .hero-image-container {
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .hero-image-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 480px;
+            aspect-ratio: 0.85;
+            border-radius: 3rem;
+            overflow: hidden;
+            border: 2px solid var(--primary-border);
+            background: #0a0a0c;
+            box-shadow: 0 0 30px -10px var(--primary-glow), 0 50px 100px -20px rgba(0,0,0,0.7);
+            transition: border-color 0.4s;
+        }
+
+        .hero-image-wrapper:hover {
+            border-color: var(--primary);
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            filter: contrast(1.05);
+            mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+        }
+
+        .image-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-30%, -30%);
+            width: 120%;
+            height: 120%;
+            background: radial-gradient(circle, var(--primary-glow) 0%, transparent 70%);
+            filter: blur(60px);
+            z-index: -1;
+            opacity: 0.6;
+        }
+
+        .badge {
+            display: inline-flex;
+            padding: 0.4rem 1rem;
+            background: rgba(59, 130, 246, 0.08);
+            border: 1px solid rgba(59, 130, 246, 0.15);
+            border-radius: 9999px;
+            color: var(--primary);
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+            width: fit-content;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--text-main);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            transition: all 0.3s;
+        }
+
+        .btn-secondary:hover {
+            opacity: 0.7;
+            transform: translateX(4px);
+        }
+
+        @media (max-width: 1024px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 4rem;
+            }
+            .hero-text {
+                align-items: center;
+            }
+            .hero-image-container {
+                justify-content: center;
+                order: -1;
+                margin-bottom: 2rem;
+            }
+            .cta-group {
+                flex-direction: column;
+                gap: 1.5rem;
+                width: 100%;
+            }
+            .btn-beam {
+                width: 100%;
+                max-width: 320px;
+            }
+            .nav-links {
+                display: none;
+            }
+            .tool-icon {
+                display: none; /* Hide icons on mobile for cleaner look */
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="glass-nav animate-fade-up">
+        <a href="#" style="font-family: var(--font-display); font-size: 1.6rem; font-weight: 300; text-decoration: none; color: white; letter-spacing: -0.05em;">LUCAS<span>.</span>PETRY</a>
+        <div class="nav-links">
+            <a href="#about">Resumo</a>
+            <a href="#projects">Projetos</a>
+            <a href="#contact">Contato</a>
+        </div>
+        <a href="#contact" class="btn-nav-accent">
+            Falar Comigo
+        </a>
+    </nav>
+
+    <header class="hero-section hero">
+        <div class="bg-aura-wrapper">
+            <div class="aura aura-1"></div>
+            <div class="aura aura-2"></div>
+            <div class="aura aura-3"></div>
+            <div class="bg-noise"></div>
+        </div>
+
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="animate-blur-in delay-100">
+                        <div class="badge">Especialista em Análise de Dados</div>
+                        <h1 class="headline">
+                            Dados que <span>explicam.</span><br>
+                            Decisões com <span>impacto.</span>
+                        </h1>
+                    </div>
+                    
+                    <p class="subheadline animate-fade-up delay-200">
+                        Eu ajudo a transformar dados brutos em respostas claras para negócios que não têm tempo a perder.
+                    </p>
+
+                    <div class="cta-group animate-fade-up delay-300">
+                        <a href="#projects" class="btn-beam">
+                            <div class="beam-border"></div>
+                            <div class="btn-content-bg">
+                                <div class="lines-overlay"></div>
+                                <div class="bottom-glow"></div>
+                            </div>
+                            <span style="position: relative; z-index: 10; display: flex; align-items: center;">
+                                Ver Projetos
+                                <i data-lucide="arrow-up-right" style="margin-left: 0.6rem; width: 1.1rem; height: 1.1rem;"></i>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-image-container animate-blur-in delay-200">
+                    <div class="image-glow"></div>
+                    
+                    <!-- Floating Tool Icons -->
+                    <div class="tool-icon animate-float" style="top: 5%; left: 0; animation-duration: 7s;">
+                        <span class="iconify" data-icon="logos:python"></span>
+                    </div>
+                    <div class="tool-icon animate-float" style="top: 15%; right: -5%; animation-duration: 5s; animation-delay: 1s;">
+                        <span class="iconify" data-icon="logos:postgresql"></span>
+                    </div>
+                    <div class="tool-icon animate-float" style="bottom: 10%; left: -8%; animation-duration: 8s; animation-delay: 2s;">
+                        <span class="iconify" data-icon="logos:tableau-icon"></span>
+                    </div>
+                    <div class="tool-icon animate-float" style="bottom: 25%; right: -10%; animation-duration: 6s; animation-delay: 0.5s;">
+                        <span class="iconify" data-icon="logos:microsoft-power-bi"></span>
+                    </div>
+
+                    <div class="hero-image-wrapper animate-float">
+                        <img src="assets/lucas-petry.jpg" alt="Lucas Petry" class="hero-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="experience-section" id="about">
+            <div class="section-bg">
+                <div class="dots-grid"></div>
+            </div>
+
+            <main class="timeline-outer">
+                <h2 class="headline" style="text-align: center; margin-bottom: 8rem; max-width: 1000px; margin-inline: auto;">
+                    De números a estratégia: uma trajetória construída em cima de <span>dados reais.</span>
+                </h2>
+
+                <div class="timeline-body" style="position: relative;">
+                    <div class="timeline-v-line"></div>
+                    <div class="timeline-v-progress" id="timeline-progress-v"></div>
+
+                    <!-- Nubank -->
+                    <div class="timeline-item-wrapper">
+                        <div class="timeline-v-dot"></div>
+                        <div class="timeline-item-content">
+                            <span class="timeline-v-year">2020</span>
+                            <div class="timeline-card-glass">
+                                <div class="company-header">
+                                    <div class="company-logo">
+                                        <span class="iconify" data-icon="simple-icons:nubank" style="color: #820ad1;"></span>
+                                    </div>
+                                    <h3 class="company-name">Nubank</h3>
+                                </div>
+                                <p class="job-desc">
+                                    Analista de dados no time de crédito. Primeiro contato com dados em escala: milhões de transações, decisões em tempo real, cultura orientada a evidências.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Google -->
+                    <div class="timeline-item-wrapper">
+                        <div class="timeline-v-dot"></div>
+                        <div class="timeline-item-content">
+                            <span class="timeline-v-year">2022</span>
+                            <div class="timeline-card-glass">
+                                <div class="company-header">
+                                    <div class="company-logo">
+                                        <span class="iconify" data-icon="logos:google-icon"></span>
+                                    </div>
+                                    <h3 class="company-name">Google</h3>
+                                </div>
+                                <p class="job-desc">
+                                    Integrou o time de analytics de produto. Trabalhou com métricas de engajamento e retenção, desenvolvendo modelos preditivos usados por squads de produto globais.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Asimov Academy -->
+                    <div class="timeline-item-wrapper">
+                        <div class="timeline-v-dot"></div>
+                        <div class="timeline-item-content">
+                            <span class="timeline-v-year">2024</span>
+                            <div class="timeline-card-glass">
+                                <div class="company-header">
+                                    <div class="company-logo">
+                                        <img src="assets/asimov-logo.png" alt="Asimov Academy">
+                                    </div>
+                                    <h3 class="company-name">Asimov Academy</h3>
+                                </div>
+                                <p class="job-desc">
+                                    Lidera projetos de análise e automação para uma das principais edtechs de tecnologia do Brasil. Foco em performance de campanhas, comportamento de alunos e decisões de negócio baseadas em dados.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </section>
+
+        <!-- Section 3: Projects -->
+        <section class="projects-section" id="projects">
+            <div class="proj-bg"></div>
+            <div class="projects-container">
+                <h2 class="headline" style="text-align: center; margin-bottom: 4rem; margin-inline: auto;">
+                    Projetos que eu já <span>criei</span>
+                </h2>
+
+                <div class="projects-grid">
+                    <!-- Project 1: Featured -->
+                    <div class="project-card featured" style="--accent-rgb: 0, 245, 255;">
+                        <div class="project-inner-grid"></div>
+                        <div class="project-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200" alt="Dashboard Performance">
+                        </div>
+                        <div class="project-info">
+                            <div class="project-meta">
+                                <span class="company">Nubank</span>
+                                <span class="year">2021</span>
+                            </div>
+                            <h3 class="project-title">Dashboard<br>comercial</h3>
+                            <p class="project-desc">Centralizou métricas de vendas e inadimplência em um painel único para decisões globais.</p>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card" style="--accent-rgb: 157, 0, 255;">
+                        <div class="project-inner-grid"></div>
+                        <div class="project-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800" alt="Churn Analysis">
+                        </div>
+                        <div class="project-info">
+                            <div class="project-meta">
+                                <span class="company">Nubank</span>
+                                <span class="year">2021</span>
+                            </div>
+                            <h3 class="project-title">Análise<br>real</h3>
+                            <p class="project-desc">Identificou os principais fatores de cancelamento em base de 500k usuários.</p>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card" style="--accent-rgb: 255, 107, 0;">
+                        <div class="project-inner-grid"></div>
+                        <div class="project-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200" alt="Google Clusters">
+                        </div>
+                        <div class="project-info">
+                            <div class="project-meta">
+                                <span class="company">Google</span>
+                                <span class="year">2022</span>
+                            </div>
+                            <h3 class="project-title">Modelos<br>globais</h3>
+                            <p class="project-desc">Criou modelos comportamentais para personalização em escala global.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Testimonials -->
+        <section class="testimonials-section" id="testimonials">
+            <h2 class="headline" style="text-align: center; margin-bottom: 4rem; margin-inline: auto;">
+                Pessoas com quem <span>trabalhei</span>
+            </h2>
+
+            <div class="marquee-container">
+                <div class="marquee-content">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card">
+                        <div class="quote-icon">“</div>
+                        <p class="testimonial-text">O Lucas tem uma habilidade rara: ele traduz análises complexas em algo que qualquer pessoa da empresa consegue entender e usar. Trabalhar com ele era ganhar clareza. Ele não entregava só os dados — entregava a resposta.</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=150&h=150&auto=format&fit=crop" alt="Ana Mendes" class="author-avatar">
+                            <div class="author-info">
+                                <span class="author-name">Ana Carolina Mendes</span>
+                                <span class="author-role">Gerente de Produto, Nubank</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card">
+                        <div class="quote-icon">“</div>
+                        <p class="testimonial-text">Em pouco tempo, o Lucas estava contribuindo com análises que influenciavam decisões de produto em escala global. Ele tem rigor técnico, mas o que mais impressiona é a velocidade com que entende o contexto de negócio.</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=150&h=150&auto=format&fit=crop" alt="Felipe Rodrigues" class="author-avatar">
+                            <div class="author-info">
+                                <span class="author-name">Felipe Rodrigues</span>
+                                <span class="author-role">Head de Analytics, Google Brasil</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-card">
+                        <div class="quote-icon">“</div>
+                        <p class="testimonial-text">Antes eu dependia de feeling para tomar decisões de campanha. Depois que o Lucas estruturou nosso painel de dados, passei a tomar decisões com confiança e velocidade. A diferença é visível nos resultados.</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=150&h=150&auto=format&fit=crop" alt="Mariana Lopes" class="author-avatar">
+                            <div class="author-info">
+                                <span class="author-name">Mariana Lopes</span>
+                                <span class="author-role">Diretora de Marketing, Asimov Academy</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 4 -->
+                    <div class="testimonial-card">
+                        <div class="quote-icon">“</div>
+                        <p class="testimonial-text">Contratei o Lucas para um projeto pontual de análise de retenção e ele entregou em metade do prazo com o dobro do que eu esperava. É o tipo de profissional que entende o problema antes de abrir qualquer planilha.</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150&h=150&auto=format&fit=crop" alt="Thiago Alves" class="author-avatar">
+                            <div class="author-info">
+                                <span class="author-name">Thiago Alves</span>
+                                <span class="author-role">CEO, Startup de RH</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DUPLICATE FOR SEAMLESS LOOP -->
+                    <div class="testimonial-card">
+                        <div class="quote-icon">“</div>
+                        <p class="testimonial-text">O Lucas tem uma habilidade rara: ele traduz análises complexas em algo que qualquer pessoa da empresa consegue entender e usar. Trabalhar com ele era ganhar clareza. Ele não entregava só os dados — entregava a resposta.</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=150&h=150&auto=format&fit=crop" alt="Ana Mendes" class="author-avatar">
+                            <div class="author-info">
+                                <span class="author-name">Ana Carolina Mendes</span>
+                                <span class="author-role">Gerente de Produto, Nubank</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="quote-icon">“</div>
+                        <p class="testimonial-text">Em pouco tempo, o Lucas estava contribuindo com análises que influenciavam decisões de produto em escala global. Ele tem rigor técnico, mas o que mais impressiona é a velocidade com que entende o contexto de negócio.</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=150&h=150&auto=format&fit=crop" alt="Felipe Rodrigues" class="author-avatar">
+                            <div class="author-info">
+                                <span class="author-name">Felipe Rodrigues</span>
+                                <span class="author-role">Head de Analytics, Google Brasil</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="quote-icon">“</div>
+                        <p class="testimonial-text">Antes eu dependia de feeling para tomar decisões de campanha. Depois que o Lucas estruturou nosso painel de dados, passei a tomar decisões com confiança e velocidade. A diferença é visível nos resultados.</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=150&h=150&auto=format&fit=crop" alt="Mariana Lopes" class="author-avatar">
+                            <div class="author-info">
+                                <span class="author-name">Mariana Lopes</span>
+                                <span class="author-role">Diretora de Marketing, Asimov Academy</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="quote-icon">“</div>
+                        <p class="testimonial-text">Contratei o Lucas para um projeto pontual de análise de retenção e ele entregou em metade do prazo com o dobro do que eu esperava. É o tipo de profissional que entende o problema antes de abrir qualquer planilha.</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150&h=150&auto=format&fit=crop" alt="Thiago Alves" class="author-avatar">
+                            <div class="author-info">
+                                <span class="author-name">Thiago Alves</span>
+                                <span class="author-role">CEO, Startup de RH</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- Section 5: Final CTA -->
+        <section class="cta-section reveal" id="contact">
+            <div class="cta-aura"></div>
+            <div class="cta-container">
+                <div class="cta-card">
+                    <h2 class="headline">
+                        Seu próximo projeto pode ser <span>guiado por dados.</span>
+                    </h2>
+                    <p class="cta-subtitle">
+                        Se você tem perguntas que os seus dados ainda não responderam, é aqui que a conversa começa.
+                    </p>
+                    <div class="cta-action">
+                        <span class="cta-action-text">Fale comigo e descubra o que está escondido nos números da sua empresa</span>
+                        
+                        <a href="mailto:contato@lucaspetry.com" class="btn-beam cta-large">
+                            <span class="btn-content-bg"></span>
+                            <span class="beam-border"></span>
+                            <span class="lines-overlay"></span>
+                            <span class="bottom-glow"></span>
+                            Entrar em contato
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // --- Intersection Observer for Reveal Animations ---
+        const revealOptions = {
+            threshold: 0.15,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Stagger project cards if the grid enters view
+                    if (entry.target.classList.contains('projects-grid')) {
+                        const cards = entry.target.querySelectorAll('.project-card');
+                        cards.forEach((card, index) => {
+                            setTimeout(() => card.classList.add('active'), index * 200);
+                        });
+                        revealObserver.unobserve(entry.target);
+                    } else {
+                        entry.target.classList.add('active');
+                        revealObserver.unobserve(entry.target);
+                    }
+                }
+            });
+        }, revealOptions);
+
+        // Observe elements
+        document.querySelectorAll('.timeline-item-wrapper, .projects-grid, .cta-section').forEach(el => {
+            revealObserver.observe(el);
+        });
+
+        // --- Vertical Timeline Progress Line ---
+        const progressLine = document.getElementById('timeline-progress-v');
+        const timelineBody = document.querySelector('.timeline-body');
+
+        const updateTimelineProgress = () => {
+            if (!progressLine || !timelineBody) return;
+
+            const rect = timelineBody.getBoundingClientRect();
+            const viewHeight = window.innerHeight;
+            
+            // Progress starts when top of timeline hits middle of screen
+            const startScroll = rect.top - (viewHeight / 2);
+            const totalHeight = rect.height;
+            
+            let progress = 0;
+            if (startScroll < 0) {
+                progress = Math.min(Math.max((Math.abs(startScroll) / totalHeight) * 100, 0), 100);
+                progressLine.style.height = `${progress}%`;
+            }
+        };
+
+    // --- Project Card 3D Tilt & Mouse Interaction ---
+    const handleOnMouseMove = e => {
+        const { currentTarget: target } = e;
+        const rect = target.getBoundingClientRect(),
+        x = e.clientX - rect.left,
+        y = e.clientY - rect.top;
+
+        // Flashlight vars
+        target.style.setProperty("--mouse-x", `${x}px`);
+        target.style.setProperty("--mouse-y", `${y}px`);
+
+        // 3D Tilt calculation
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const rotateX = ((y - centerY) / centerY) * -10; // Max 10deg
+        const rotateY = ((x - centerX) / centerX) * 10;
+
+        target.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    };
+
+    const handleMouseLeave = e => {
+        const { currentTarget: target } = e;
+        target.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg)`;
+    };
+
+    for(const card of document.querySelectorAll(".project-card")) {
+        card.addEventListener('mousemove', handleOnMouseMove);
+        card.addEventListener('mouseleave', handleMouseLeave);
+    }
+
+        window.addEventListener('scroll', updateTimelineProgress);
+        window.addEventListener('resize', updateTimelineProgress);
+        updateTimelineProgress(); // Initial check
+    </script>
+</body>
+</html>
