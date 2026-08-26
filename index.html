@@ -79,20 +79,37 @@
                 </svg>
               </span>
             </a>
-            <a href="#portfolio" class="btn-beam">
-              <div class="btn-content-bg"></div>
-              <span
-                style="
-                  position: relative;
-                  z-index: 10;
-                  display: flex;
-                  align-items: center;
-                  gap: 0.5rem;
-                "
-              >
-                Conhece meu Linkedin
-              </span>
-            </a>
+            <div style="display: flex; gap: 1rem;">
+              <a href="#" class="btn-beam" style="padding: 0 1.2rem;" aria-label="GitHub">
+                <div class="btn-content-bg"></div>
+                <span style="position: relative; z-index: 10; display: flex; align-items: center;">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 1.2rem; height: 1.2rem;">
+                    <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.24c3-.34 6-1.53 6-6.76 0-1.5-.5-2.8-1.4-3.8.14-.36.6-1.8-.1-3.7 0 0-1.1-.3-3.7 2a10.8 10.8 0 0 0-6 0c-2.6-2.3-3.7-2-3.7-2-.7 1.9-.2 3.4-.1 3.7C4.5 11.2 4 12.5 4 14c0 5.2 3 6.4 6 6.76a4.8 4.8 0 0 0-1 3.24v4"></path>
+                  </svg>
+                </span>
+              </a>
+
+              <a href="#" class="btn-beam" style="padding: 0 1.2rem;" aria-label="LinkedIn">
+                <div class="btn-content-bg"></div>
+                <span style="position: relative; z-index: 10; display: flex; align-items: center;">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 1.2rem; height: 1.2rem;">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                  </svg>
+                </span>
+              </a>
+
+              <a href="mailto:seu-email@exemplo.com" class="btn-beam" style="padding: 0 1.2rem;" aria-label="Email">
+                <div class="btn-content-bg"></div>
+                <span style="position: relative; z-index: 10; display: flex; align-items: center;">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 1.2rem; height: 1.2rem;">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </span>
+              </a>
+            </div>
           </div>
         </div>
 
@@ -354,7 +371,7 @@
 
         <div class="projects-grid">
           <!-- Project 1 -->
-          <div class="project-card featured reveal">
+          <div class="project-card featured reveal" onclick="openModal(0)">
             <div class="project-image">
               <img
                 src="https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=800&auto=format&fit=crop"
@@ -373,7 +390,11 @@
           </div>
 
           <!-- Project 2 -->
-          <div class="project-card reveal" style="transition-delay: 0.2s">
+          <div
+            class="project-card reveal"
+            style="transition-delay: 0.2s"
+            onclick="openModal(1)"
+          >
             <div class="project-image">
               <img
                 src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop"
@@ -394,7 +415,11 @@
           </div>
 
           <!-- Project 3 -->
-          <div class="project-card reveal" style="transition-delay: 0.4s">
+          <div
+            class="project-card reveal"
+            style="transition-delay: 0.4s"
+            onclick="openModal(2)"
+          >
             <div class="project-image">
               <img
                 src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?q=80&w=800&auto=format&fit=crop"
@@ -598,6 +623,42 @@
       </div>
     </section>
 
+    <!-- Project Modal -->
+    <div class="modal-overlay" id="projectModal">
+      <div class="modal-content glassmorphism">
+        <button class="modal-close" id="closeModal">&times;</button>
+        <div class="modal-body">
+          <div class="modal-image-wrapper">
+            <img src="" id="modalImg" alt="Project Image" />
+          </div>
+          <div class="modal-info">
+            <div class="project-meta" id="modalMeta"></div>
+            <h3
+              class="project-title"
+              id="modalTitle"
+              style="font-size: 2rem"
+            ></h3>
+
+            <div class="modal-tags" id="modalTags">
+              <!-- Tags injected via JS -->
+            </div>
+
+            <p class="modal-desc" id="modalDesc"></p>
+
+            <div style="margin-top: 2.5rem">
+              <a
+                href="#"
+                class="btn-primary"
+                id="modalBtn"
+                style="padding: 0.75rem 2rem; border-radius: 9999px"
+                >Acessar</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Script for scroll animations -->
     <script>
       document.addEventListener("DOMContentLoaded", () => {
@@ -614,6 +675,73 @@
         );
 
         reveals.forEach((reveal) => observer.observe(reveal));
+      });
+
+      // Modal Logic
+      const projectsData = [
+        {
+          title: "Design System Corporativo",
+          meta: "Nubank · 2021",
+          techs: ["React", "TypeScript", "Storybook", "Tailwind CSS"],
+          desc: "Construção do zero de uma biblioteca de componentes altamente reutilizável e documentada. O foco principal foi garantir acessibilidade (padrão WCAG AA) e performance. A adoção do Design System reduziu o tempo de prototipagem e desenvolvimento de novas features em mais de 40% em mais de 20 times internos.",
+          btn: "Ver Case Study",
+          img: "https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=800&auto=format&fit=crop",
+        },
+        {
+          title: "Dashboard Financeiro de Alta Performance",
+          meta: "Nubank · 2021",
+          techs: ["Next.js", "React Query", "Recharts", "Virtualização"],
+          desc: "Desenvolvimento de uma interface crítica para visualização de transações financeiras em tempo real. O grande desafio técnico foi lidar com renderização de grandes volumes de dados. Através de virtualização de listas e otimização do ciclo de vida dos componentes, garantimos uma navegação fluida em 60fps sem travar a thread principal do navegador.",
+          btn: "Acessar Dashboard",
+          img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop",
+        },
+        {
+          title: "Plataforma Interativa de Educação",
+          meta: "Google · 2022",
+          techs: ["React", "Framer Motion", "GraphQL", "Zustand"],
+          desc: "Criação de um web app educacional focado em alto engajamento e retenção de usuários. A interface foi construída com foco absoluto em micro-interações e transições de página perfeitas, entregando uma experiência de usuário imersiva, muito semelhante à de um aplicativo nativo no celular.",
+          btn: "Acessar Plataforma",
+          img: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?q=80&w=800&auto=format&fit=crop",
+        },
+      ];
+
+      const modal = document.getElementById("projectModal");
+      const closeModalBtn = document.getElementById("closeModal");
+
+      const modalImg = document.getElementById("modalImg");
+      const modalMeta = document.getElementById("modalMeta");
+      const modalTitle = document.getElementById("modalTitle");
+      const modalTags = document.getElementById("modalTags");
+      const modalDesc = document.getElementById("modalDesc");
+      const modalBtn = document.getElementById("modalBtn");
+
+      window.openModal = (index) => {
+        const data = projectsData[index];
+        modalImg.src = data.img;
+        modalMeta.textContent = data.meta;
+        modalTitle.textContent = data.title;
+        modalDesc.textContent = data.desc;
+        modalBtn.textContent = data.btn;
+
+        modalTags.innerHTML = data.techs
+          .map((tech) => `<span class="modal-tag">${tech}</span>`)
+          .join("");
+
+        modal.classList.add("active");
+        document.body.style.overflow = "hidden"; // Prevent background scrolling
+      };
+
+      const closeModal = () => {
+        modal.classList.remove("active");
+        document.body.style.overflow = "";
+      };
+
+      closeModalBtn.addEventListener("click", closeModal);
+
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          closeModal();
+        }
       });
     </script>
   </body>
