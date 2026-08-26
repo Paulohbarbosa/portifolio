@@ -104,5 +104,63 @@
         </div>
       </div>
     </main>
+
+    <!-- Seção 2: Linha do Tempo -->
+    <section class="timeline-section">
+      <div class="timeline-container">
+        <h2 class="timeline-headline reveal">
+          Do pixel à produção: uma <br />
+          <span class="text-blue">trajetória construída com grandes empresas.</span>
+        </h2>
+        
+        <div class="timeline">
+          <!-- Item 1 -->
+          <div class="timeline-item reveal">
+            <div class="timeline-year">2020</div>
+            <div class="timeline-point"></div>
+            <div class="timeline-card">
+              <h3 class="company-name text-blue">Nubank</h3>
+              <p class="company-desc">Desenvolvedor Front-end no time de Design System. Primeiro contato com arquitetura web em escala: criação de bibliotecas de componentes, foco rigoroso em acessibilidade e interfaces fluidas para milhões de usuários.</p>
+            </div>
+          </div>
+          
+          <!-- Item 2 -->
+          <div class="timeline-item reveal">
+            <div class="timeline-year">2022</div>
+            <div class="timeline-point"></div>
+            <div class="timeline-card">
+              <h3 class="company-name text-purple">Google</h3>
+              <p class="company-desc">Integrou o time de engenharia de interface de produto. Trabalhou diretamente com otimização de Core Web Vitals, performance de renderização e desenvolvimento de micro-frontends usados por squads globais.</p>
+            </div>
+          </div>
+          
+          <!-- Item 3 -->
+          <div class="timeline-item reveal">
+            <div class="timeline-year">2024</div>
+            <div class="timeline-point"></div>
+            <div class="timeline-card">
+              <h3 class="company-name text-blue">Asimov Academy</h3>
+              <p class="company-desc">Lidera o front-end e a experiência do usuário para uma das principais edtechs de tecnologia do Brasil. Foco em modernização de stack (React/Next.js), animações complexas e criação de interfaces de aprendizado altamente imersivas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Script for scroll animations -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const reveals = document.querySelectorAll(".reveal");
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("active");
+            }
+          });
+        }, { threshold: 0.15 });
+        
+        reveals.forEach(reveal => observer.observe(reveal));
+      });
+    </script>
   </body>
 </html>

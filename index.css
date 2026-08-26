@@ -27,7 +27,7 @@ body {
 
 /* Background Elements */
 .bg-elements {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -376,4 +376,177 @@ body {
 
     .card-1 { left: 0; }
     .card-2 { right: 0; }
+}
+
+/* Timeline Section */
+.timeline-section {
+    padding: 8rem 2rem;
+    position: relative;
+    background-color: transparent; /* Allows bg-elements to show if we want, or solid */
+}
+
+.timeline-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.timeline-headline {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    font-weight: 300;
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 6rem;
+}
+
+.text-purple {
+    color: var(--accent-purple);
+}
+
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Central line */
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background: linear-gradient(to bottom, transparent, var(--accent-blue), var(--accent-purple), transparent);
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem; /* Keep cards close */
+    position: relative;
+    width: 100%;
+}
+
+.timeline-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.timeline-year {
+    width: 45%;
+    text-align: right;
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    padding: 0 3rem;
+    letter-spacing: 2px;
+}
+
+.timeline-item:nth-child(even) .timeline-year {
+    text-align: left;
+}
+
+.timeline-point {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 16px;
+    background-color: var(--bg-color);
+    border: 3px solid var(--accent-blue);
+    border-radius: 50%;
+    z-index: 2;
+    box-shadow: 0 0 15px var(--accent-blue);
+}
+
+.timeline-item:nth-child(even) .timeline-point {
+    border-color: var(--accent-purple);
+    box-shadow: 0 0 15px var(--accent-purple);
+}
+
+.timeline-card {
+    width: 45%;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border-color);
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+}
+
+.timeline-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.company-name {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+.company-desc {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Scroll Animation Classes */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Timeline */
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 30px;
+    }
+    
+    .timeline-item, .timeline-item:nth-child(even) {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-bottom: 3rem;
+    }
+    
+    .timeline-year {
+        width: auto;
+        text-align: left;
+        padding: 0;
+        position: absolute;
+        left: 60px;
+        top: -5px;
+        font-size: 1.25rem;
+        color: var(--accent-blue);
+    }
+    
+    .timeline-item:nth-child(even) .timeline-year {
+        color: var(--accent-purple);
+    }
+
+    .timeline-point {
+        left: 30px;
+        top: 15px;
+    }
+    
+    .timeline-card {
+        width: calc(100% - 60px);
+        margin-left: 60px;
+        margin-top: 35px;
+        padding: 1.5rem;
+    }
 }
