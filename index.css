@@ -771,3 +771,142 @@ body {
         font-size: 1rem;
     }
 }
+
+/* Button Beam Animation */
+.btn-beam {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 54px;
+  padding: 0 2rem;
+  background: #050505;
+  color: white;
+  text-decoration: none;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+  border: none;
+  z-index: 1;
+}
+
+.btn-beam .beam-border {
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: inherit;
+  background: transparent;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: xor;
+  z-index: -2;
+}
+
+.btn-beam .beam-border::after {
+  content: "";
+  position: absolute;
+  inset: -100%;
+  background: conic-gradient(from 0deg, transparent 0% 80%, var(--accent-blue) 100%);
+  animation: beam-spin 3s linear infinite;
+}
+
+.btn-beam .btn-content-bg {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  bottom: 1px;
+  left: 1px;
+  background: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: inherit;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.btn-beam .lines-overlay {
+  position: absolute;
+  inset: 0;
+  opacity: 0.15;
+  mix-blend-mode: plus-lighter;
+  background-image: repeating-linear-gradient(90deg, #fff, #fff 1px, transparent 1px, transparent 8px);
+  background-size: 24px 100%;
+  animation: lines-slide 1.5s linear infinite;
+}
+
+.btn-beam .bottom-glow {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  width: 80%;
+  height: 60%;
+  background: radial-gradient(circle, var(--accent-blue) 0%, transparent 75%);
+  filter: blur(15px);
+  opacity: 0.4;
+  transition: opacity 0.4s;
+}
+
+.btn-beam:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 15px 35px -10px var(--accent-blue);
+}
+
+.btn-beam:hover .bottom-glow {
+  opacity: 0.8;
+}
+
+@keyframes beam-spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes lines-slide {
+  0% { background-position: 0 0; }
+  100% { background-position: 24px 0; }
+}
+
+/* Section 5 CTA */
+.cta-section {
+    padding: 10rem 2rem;
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    background-color: transparent; /* O bg-elements já é fixo por trás de tudo */
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.cta-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.cta-headline {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(3rem, 5vw, 5rem);
+    font-weight: 300;
+    line-height: 1.1;
+}
+
+.cta-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.25rem;
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+.cta-text {
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
