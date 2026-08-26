@@ -289,13 +289,32 @@ body {
 }
 
 .card-1 {
-    bottom: 10%;
-    left: -15%;
+    top: 15%;
+    left: -10%;
+    animation-delay: 0s;
 }
 
 .card-2 {
-    top: 20%;
-    right: -10%;
+    top: 45%;
+    right: -15%;
+    animation-delay: -2s;
+}
+
+.card-3 {
+    bottom: 20%;
+    left: -12%;
+    animation-delay: -4s;
+}
+
+.card-4 {
+    bottom: 5%;
+    right: -5%;
+    animation-delay: -1s;
+}
+
+.card-5 {
+    top: -5%;
+    right: 15%;
     animation-delay: -3s;
 }
 
