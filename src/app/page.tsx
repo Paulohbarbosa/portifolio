@@ -8,6 +8,7 @@ import Timeline from "@/components/Timeline";
 import Projects from "@/components/Projects";
 import Testimonials from "@/components/Testimonials";
 import CTA from "@/components/CTA";
+import Radar from "@/components/Radar";
 
 export default function Home() {
   useEffect(() => {
@@ -44,6 +45,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Skills />
+      <Radar />
       <Timeline />
       <Projects />
       <Testimonials />
