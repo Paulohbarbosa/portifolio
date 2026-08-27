@@ -152,7 +152,7 @@ export default function Hero() {
               alt="paulo barbosa"
               className="profile-photo"
             />
-
+            {/* podemos automatizar esse ícones comforme que for adicionado novas skills */}
             <div
               className="floating-card card-1 card-icon"
               style={{

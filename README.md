@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfólio Pessoal
 
-## Getting Started
+Este é um projeto de portfólio pessoal moderno e responsivo, desenvolvido para demonstrar habilidades, projetos, experiência e informações de contato.
 
-First, run the development server:
+## 🚀 Tecnologias Escolhidas
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+O projeto foi construído utilizando as seguintes tecnologias:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **[Next.js 15+](https://nextjs.org/):** Framework React escolhido por sua excelente performance, otimizações nativas e experiência de desenvolvimento fluida através do App Router.
+- **[React 19](https://react.dev/):** Biblioteca principal para a construção de interfaces de usuário interativas e dinâmicas, baseadas em componentes reutilizáveis.
+- **[TypeScript](https://www.typescriptlang.org/):** Superconjunto de JavaScript que adiciona tipagem estática, proporcionando maior segurança no código, prevenindo erros em tempo de execução e facilitando a manutenção a longo prazo.
+- **[Tailwind CSS v4](https://tailwindcss.com/):** Framework CSS *utility-first* que permite a estilização rápida e responsiva diretamente no markup, facilitando a criação de designs customizados e estéticas ricas.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ✨ Características e Seções do Projeto
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+O portfólio é estruturado em componentes modulares focados em oferecer uma ótima experiência para o usuário:
 
-## Learn More
+- **Hero (`Hero.tsx`):** Seção inicial de impacto (apresentação), projetada para criar uma primeira impressão forte.
+- **Projetos (`Projects.tsx`):** Galeria para vitrine dos trabalhos anteriores e estudos de caso.
+- **Habilidades (`Skills.tsx`):** Demonstração visual das tecnologias, linguagens e ferramentas dominadas.
+- **Linha do Tempo (`Timeline.tsx`):** Exibição da trajetória profissional ou educacional de forma cronológica.
+- **Depoimentos (`Testimonials.tsx`):** Espaço dedicado para exibir feedbacks e recomendações.
+- **Chamada para Ação (`CTA.tsx`):** Seção estratégica focada em engajar o visitante e incentivar o contato para oportunidades de trabalho.
+- **Navegação (`Navbar.tsx`):** Menu de acesso rápido e responsivo, facilitando a movimentação entre as seções.
 
-To learn more about Next.js, take a look at the following resources:
+## 📦 Como executar o projeto localmente
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Clone o repositório em sua máquina.
+2. Instale as dependências através do seu gerenciador de pacotes favorito:
+   ```bash
+   npm install
+   # ou
+   yarn install
+   # ou
+   pnpm install
+   ```
+3. Inicie o servidor de desenvolvimento:
+   ```bash
+   npm run dev
+   # ou
+   yarn dev
+   # ou
+   pnpm dev
+   ```
+4. Abra [http://localhost:3000](http://localhost:3000) no seu navegador para visualizar.
