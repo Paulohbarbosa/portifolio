@@ -1,0 +1,168 @@
+{
+  "personalInfo": {
+    "firstName": "Paulo",
+    "middleName": "Henrique dos Santos'",
+    "lastName": "Barbosa",
+    "role": "Engenheiro de Software Front-end",
+    "shortBio": "Especialista em construir interfaces modernas, acessíveis e de alta performance.",
+    "photo": "/paulo-barbosa-foto.png",
+    "social": [
+      {
+        "name": "GitHub",
+        "url": "https://github.com/seu-usuario",
+        "icon": "github"
+      },
+      {
+        "name": "LinkedIn",
+        "url": "https://linkedin.com/in/seu-usuario",
+        "icon": "linkedin"
+      },
+      {
+        "name": "Whatsapp",
+        "url": "[TELEFONE_NUMBER]",
+        "icon": "whatsapp"
+      },
+      {
+        "name": "email",
+        "url": "[EMAIL_ADDRESS]",
+        "icon": "email"
+      }
+    ]
+  },
+  "heroinformations": {
+    "titlePrimario": "Interfaces que engajam.",
+    "titleSecundario": "Códigos com impacto.",
+    "frase": "Eu ajudo a transformar designs complexos em aplicações web rápidas, acessíveis e escaláveis para negócios que exigem excelência visual e performance."
+  },
+  "heroIcons": [
+    {
+      "name": "React",
+      "icon": "react",
+      "color": "blue"
+    },
+    {
+      "name": "Next.js",
+      "icon": "nextjs",
+      "color": "white"
+    },
+    {
+      "name": "Tailwind",
+      "icon": "tailwind",
+      "color": "cyan"
+    }
+  ],
+  "skills": {
+    "focus": [
+      { "name": "Arquitetura Front-end", "glow": "blue" },
+      { "name": "Micro-frontends", "glow": "purple" },
+      { "name": "Web Performance", "glow": "red" },
+      { "name": "Acessibilidade (a11y)", "glow": "green" },
+      { "name": "Animações Complexas", "glow": "yellow" }
+    ],
+    "technologies": [
+      { "name": "React", "glow": "blue" },
+      { "name": "Next.js", "glow": "white" },
+      { "name": "TypeScript", "glow": "blue" },
+      { "name": "JavaScript (ES6+)", "glow": "yellow" },
+      { "name": "Tailwind CSS", "glow": "cyan" },
+      { "name": "Framer Motion", "glow": "purple" },
+      { "name": "Jest", "glow": "red" },
+      { "name": "GraphQL", "glow": "pink" }
+    ],
+    "softSkills": [
+      { "name": "Criatividade", "glow": "blue" },
+      { "name": "Resolução de problemas", "glow": "purple" },
+      { "name": "Comunicação", "glow": "red" },
+      { "name": "Pensamento analítico", "glow": "green" },
+      { "name": "Empatia", "glow": "yellow" },
+      { "name": "Trabalho em equipe", "glow": "blue" },
+      { "name": "Organização", "glow": "pink" }
+    ]
+  },
+  "education": [
+    {
+      "title": "Tecnologo em Analise e Desenvolvimento de Sistemas",
+      "institution": "Universidade Estacio de Sá",
+      "period": "2024 - 2026",
+      "description": "Base sólida em algoritmos, estrutura de dados e engenharia de sistemas."
+    },
+    {
+      "title": "Especialização em Arq. Front-end e React",
+      "institution": "Rocketseat / Alura",
+      "period": "2021",
+      "description": "Foco em componentização, gerenciamento de estado global e clean code no front-end."
+    },
+    {
+      "title": "Masterclass em UI Engineering e Web Vitals",
+      "institution": "Google Developers / Udacity",
+      "period": "2022",
+      "description": "Treinamento avançado em otimização de renderização, métricas de performance e acessibilidade web."
+    }
+  ],
+  "radar": [
+    {
+      "badge": "Em andamento",
+      "badgeStyle": "blue",
+      "title": "Experiências Imersivas com Three.js e WebGL",
+      "description": "Estudando a criação de interfaces 3D renderizadas no navegador para trazer um novo nível de interatividade aos produtos.",
+      "source": "Three.js Journey por Bruno Simon"
+    },
+    {
+      "badge": "Praticando",
+      "badgeStyle": "yellow",
+      "title": "Server Components e Next.js App Router",
+      "description": "Aprofundando em arquiteturas híbridas de renderização para entregar aplicações que combinam SEO perfeito com a velocidade do React.",
+      "source": "Epic Web Dev / Documentação Oficial"
+    },
+    {
+      "badge": "Explorando",
+      "badgeStyle": "purple",
+      "title": "Integração de IA no Front-end (LLMs)",
+      "description": "Entendendo como criar interfaces conversacionais modernas e integrar APIs de Inteligência Artificial para gerar experiências de usuário mais espertas e preditivas.",
+      "source": "Pesquisa e Projetos Pessoais"
+    }
+  ],
+  "timeline": [
+    {
+      "year": "2020",
+      "company": "Nubank",
+      "color": "blue",
+      "description": "Desenvolvedor Front-end no time de Design System. Primeiro contato com arquitetura web em escala: criação de bibliotecas de componentes, foco rigoroso em acessibilidade e interfaces fluidas para milhões de usuários."
+    },
+    {
+      "year": "2022",
+      "company": "Google",
+      "color": "purple",
+      "description": "Integrou o time de engenharia de interface de produto. Trabalhou diretamente com otimização de Core Web Vitals, performance de renderização e desenvolvimento de micro-frontends usados por squads globais."
+    },
+    {
+      "year": "2024",
+      "company": "Asimov Academy",
+      "color": "blue",
+      "description": "Lidera o front-end e a experiência do usuário para uma das principais edtechs de tecnologia do Brasil. Foco em modernização de stack (React/Next.js), animações complexas e criação de interfaces de aprendizado altamente imersivas."
+    }
+  ],
+  "projects": [
+    {
+      "title": "Design System Global",
+      "description": "Construção do zero de uma biblioteca de componentes altamente reutilizável e documentada. O foco principal foi garantir acessibilidade (padrão WCAG AA) e performance. A adoção do Design System reduziu o tempo de prototipagem e desenvolvimento de novas features em mais de 40% em mais de 20 times internos.",
+      "techs": ["React", "TypeScript", "Tailwind CSS"],
+      "link": "#",
+      "github": "#"
+    },
+    {
+      "title": "Plataforma E-learning",
+      "description": "Sistema de aprendizado imersivo para milhares de alunos.",
+      "techs": ["Next.js", "Framer Motion", "GraphQL"],
+      "link": "#",
+      "github": "#"
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "Nome da Pessoa",
+      "role": "Tech Lead na Empresa X",
+      "text": "Trabalhar com o Paulo foi incrível. Ele tem um olho clínico para design e código impecável."
+    }
+  ]
+}
