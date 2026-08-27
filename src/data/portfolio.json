@@ -30,9 +30,9 @@
     ]
   },
   "heroinformations": {
-    "titlePrimario": "Interfaces que engajam.",
-    "titleSecundario": "Códigos com impacto.",
-    "frase": "Eu ajudo a transformar designs complexos em aplicações web rápidas, acessíveis e escaláveis para negócios que exigem excelência visual e performance."
+    "primaryTitle": "Interfaces que engajam.",
+    "secondaryTitle": "Códigos inteligentes.",
+    "description": "Eu ajudo a transformar designs complexos em aplicações web rápidas, acessíveis e escaláveis para negócios que exigem excelência visual e performance."
   },
   "heroIcons": [
     {
@@ -51,13 +51,18 @@
       "color": "cyan"
     }
   ],
+  "skillsInfo": {
+    "primaryTitle": "Fundamentos sólidos.",
+    "secondaryTitle": "Tecnologias modernas.",
+    "description": "O ecossistema web evolui rápido. Minha base técnica garante que os projetos utilizem as melhores práticas de performance, arquitetura e acessibilidade."
+  },
   "skills": {
     "focus": [
-      { "name": "Arquitetura Front-end", "glow": "blue" },
-      { "name": "Micro-frontends", "glow": "purple" },
-      { "name": "Web Performance", "glow": "red" },
-      { "name": "Acessibilidade (a11y)", "glow": "green" },
-      { "name": "Animações Complexas", "glow": "yellow" }
+      { "name": "Arquitetura Front-end", "glow": "blue", "link": "#" },
+      { "name": "Micro-frontends", "glow": "purple", "link": "#" },
+      { "name": "Web Performance", "glow": "red", "link": "#" },
+      { "name": "Acessibilidade (a11y)", "glow": "green", "link": "#" },
+      { "name": "Animações Complexas", "glow": "yellow", "link": "#" }
     ],
     "technologies": [
       { "name": "React", "glow": "blue" },
@@ -99,6 +104,11 @@
       "description": "Treinamento avançado em otimização de renderização, métricas de performance e acessibilidade web."
     }
   ],
+  "radarInfo": {
+    "primaryTitle": "Explorando a ",
+    "secondaryTitle": "próxima fronteira.",
+    "description": "O ecossistema web não para de evoluir, e eu também não. Essas são as tecnologias que estão no meu radar de estudos."
+  },
   "radar": [
     {
       "badge": "Em andamento",
@@ -122,6 +132,11 @@
       "source": "Pesquisa e Projetos Pessoais"
     }
   ],
+  "experienceInfo": {
+    "primaryTitle": "Do pixel à produção:",
+    "secondaryTitle": "Trajetória construída com grandes empresas.",
+    "description": "Minha trajetória profissional é marcada pela paixão em criar interfaces que unem estética, performance e acessibilidade. Cada experiência me ajudou a evoluir como profissional e a construir uma base sólida para os projetos que desenvolvo."
+  },
   "timeline": [
     {
       "year": "2020",
@@ -145,24 +160,78 @@
   "projects": [
     {
       "title": "Design System Global",
+      "badge": "Nubank",
+      "year": "2021",
       "description": "Construção do zero de uma biblioteca de componentes altamente reutilizável e documentada. O foco principal foi garantir acessibilidade (padrão WCAG AA) e performance. A adoção do Design System reduziu o tempo de prototipagem e desenvolvimento de novas features em mais de 40% em mais de 20 times internos.",
       "techs": ["React", "TypeScript", "Tailwind CSS"],
-      "link": "#",
       "github": "#"
     },
     {
       "title": "Plataforma E-learning",
-      "description": "Sistema de aprendizado imersivo para milhares de alunos.",
+      "badge": "Asimov Academy",
+      "year": "2024",
+      "description": "Criação de um web app educacional focado em alto engajamento e retenção de usuários. A interface foi construída com foco absoluto em micro-interações e transições de página perfeitas, entregando uma experiência de usuário imersiva, muito semelhante à de um aplicativo nativo no celular.",
       "techs": ["Next.js", "Framer Motion", "GraphQL"],
-      "link": "#",
+      "github": "#"
+    },
+    {
+      "title": "Dashboard Financeiro de Alta Performance",
+      "badge": "Nubank",
+      "year": "2021",
+      "description": "Desenvolvimento de uma interface crítica para visualização de transações financeiras em tempo real. O grande desafio técnico foi lidar com renderização de grandes volumes de dados. Através de virtualização de listas e otimização do ciclo de vida dos componentes, garantimos uma navegação fluida em 60fps sem travar a thread principal do navegador.",
+      "techs": ["React", "TypeScript", "Tailwind CSS"],
       "github": "#"
     }
   ],
+  "testimonialsInfo": {
+    "primaryTitle": "Pessoas com quem",
+    "secondaryTitle": "trabalhei.",
+    "description": "Depoimentos de clientes e colegas que acompanharam de perto minha trajetória e desenvolvimento profissional."
+  },
   "testimonials": [
     {
-      "name": "Nome da Pessoa",
-      "role": "Tech Lead na Empresa X",
-      "text": "Trabalhar com o Paulo foi incrível. Ele tem um olho clínico para design e código impecável."
+      "name": "Camila Santos",
+      "role": "UX Designer Senior",
+      "text": "O Paulo transformou completamente a performance da nossa aplicação. O dashboard que antes demorava segundos para carregar, agora é instantâneo. Uma entrega excepcional."
+    },
+    {
+      "name": "Mariana Costa",
+      "role": "Product Manager, Nubank",
+      "text": "Trabalhar com o Paulo foi uma aula de front-end avançado. Ele tem uma visão de arquitetura e UX que é rara de encontrar. O código dele é tão elegante quanto o design final."
+    },
+    {
+      "name": "Rafael Almeida",
+      "role": "Tech Lead, Google",
+      "text": "Nossa plataforma de ensino nunca foi tão imersiva. A fluidez das animações e a qualidade da interação elevaram o nosso produto a um nível de classe mundial."
+    },
+    {
+      "name": "Diego Fernandes",
+      "role": "CTO, Asimov Academy",
+      "text": "O nível de detalhe e o rigor em acessibilidade no nosso Design System foi impressionante. O Paulo não escreve apenas código, ele cria experiências impecáveis."
     }
-  ]
+  ],
+  "ctaInfo": {
+    "primaryTitle": "Vamos criar algo incrível juntos?",
+    "secondaryTitle": "Pronto pra transformar suas ideias em realidade?",
+    "description": "Seja um projeto novo, uma consultoria ou uma parceria, adoraria fazer parte da sua jornada. Vamos tomar um café e conversar sobre como posso agregar valor ao seu negócio.",
+    "buttonText": "Vamos Conversar"
+  },
+  "footer": {
+    "description": "Desenvolvido com paixão, código e design.",
+    "links": [
+      {
+        "label": "LinkedIn",
+        "href": "#"
+      },
+      {
+        "label": "GitHub",
+        "href": "#"
+      },
+      {
+        "label": "Instagram",
+        "href": "#"
+      }
+    ],
+    "copyright": "© 2025 Paulo Henrique. Todos os direitos reservados."
+  }
 }
