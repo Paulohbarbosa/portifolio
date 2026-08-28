@@ -854,8 +854,14 @@ body {
   padding: 8rem 2rem;
   position: relative;
   z-index: 10; /* This places it above the fixed bg-elements */
-  background-color: #000000; /* Solid background, completely different from Section 1 & 2 */
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0px,
+    #000000 200px,
+    #000000 calc(100% - 200px),
+    rgba(0, 0, 0, 0) 100%
+  );
 }
 
 .projects-container {
@@ -989,7 +995,6 @@ body {
   position: relative;
   z-index: 10;
   overflow: hidden;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 /* Modal CSS */
