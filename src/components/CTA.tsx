@@ -5,7 +5,7 @@ export default function CTA() {
     <section id="contato" className="cta-section reveal">
       <div className="cta-container">
         <h2 className="cta-headline">
-          {data?.ctaInfo.primaryTitle}
+          {data?.ctaInfo.primaryTitle}{" "}
           <span className="text-blue">{data?.ctaInfo.secondaryTitle}</span>
         </h2>
 

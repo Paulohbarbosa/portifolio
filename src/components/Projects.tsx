@@ -27,12 +27,17 @@ export default function Projects() {
     <>
       <section id="projetos" className="projects-section">
         <div className="projects-container">
-          <h2 className="projects-headline reveal">
-            {data.projectsInfo.primaryTitle}{" "}
-            <span className="text-blue">
-              {data.projectsInfo.secondaryTitle}
-            </span>
-          </h2>
+          <div className="section-header reveal">
+            <h2 className="title-section ">
+              {data.projectsInfo.primaryTitle}{" "}
+              <span className="text-blue">
+                {data.projectsInfo.secondaryTitle}
+              </span>
+            </h2>
+            <p className="description-section">
+              {data.projectsInfo.description}
+            </p>
+          </div>
 
           <div className="projects-grid">
             {/* projeto em destaque */}
