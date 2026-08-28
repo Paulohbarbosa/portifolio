@@ -58,11 +58,11 @@
   },
   "skills": {
     "focus": [
-      { "name": "Arquitetura Front-end", "glow": "blue", "link": "#" },
-      { "name": "Micro-frontends", "glow": "purple", "link": "#" },
-      { "name": "Web Performance", "glow": "red", "link": "#" },
-      { "name": "Acessibilidade (a11y)", "glow": "green", "link": "#" },
-      { "name": "Animações Complexas", "glow": "yellow", "link": "#" }
+      { "name": "Arquitetura Front-end", "link": "#" },
+      { "name": "Micro-frontends", "link": "#" },
+      { "name": "Web Performance", "link": "#" },
+      { "name": "Acessibilidade (a11y)", "link": "#" },
+      { "name": "Animações Complexas", "link": "#" }
     ],
     "technologies": [
       { "name": "React", "glow": "blue" },
@@ -74,7 +74,7 @@
       { "name": "Jest", "glow": "red" },
       { "name": "GraphQL", "glow": "pink" }
     ],
-    "softSkills": [
+    "aptitudes": [
       { "name": "Criatividade", "glow": "blue" },
       { "name": "Resolução de problemas", "glow": "purple" },
       { "name": "Comunicação", "glow": "red" },
