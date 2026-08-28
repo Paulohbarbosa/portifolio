@@ -169,13 +169,6 @@ body {
   border-color: rgba(255, 255, 255, 0.2);
 }
 
-.cta-group {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
 .btn-primary {
   display: inline-flex;
   align-items: center;
@@ -435,36 +428,55 @@ body {
 }
 
 /* ---------------------------------
-   SKILLS & EDUCATION SECTION
+   GLOBAL SECTION STYLES
 --------------------------------- */
-.skills-section {
+.skills-section,
+.timeline-section,
+.projects-section,
+.testimonials-section,
+.cta-section {
   position: relative;
-  padding: 8rem 2rem;
   z-index: 10;
+  padding: 8rem 2rem;
 }
 
-.skills-container {
+.hero-container,
+.skills-container,
+.projects-container {
   max-width: 1200px;
   margin: 0 auto;
 }
 
+.skills-headline,
+.projects-headline,
+.testimonials-headline,
+.cta-headline {
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  line-height: 1.2;
+  font-size: clamp(2.5rem, 4vw, 4rem);
+}
+
+.skills-subtitle,
+.cta-subtitle {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* ---------------------------------
+   SKILLS & EDUCATION SECTION
+--------------------------------- */
 .skills-header {
   text-align: center;
   margin-bottom: 5rem;
 }
 
 .skills-headline {
-  font-family: "Oswald", sans-serif;
-  font-size: clamp(2.5rem, 4vw, 4rem);
-  font-weight: 300;
-  line-height: 1.2;
   margin-bottom: 1.5rem;
 }
 /* description-section */
 .skills-subtitle {
-  color: var(--text-secondary);
   font-size: 1.15rem;
-  line-height: 1.6;
   max-width: 800px;
   margin: 0 auto;
 }
@@ -656,8 +668,6 @@ body {
 
 /* Timeline Section */
 .timeline-section {
-  padding: 8rem 2rem;
-  position: relative;
   background-color: transparent; /* Allows bg-elements to show if we want, or solid */
 }
 
@@ -851,10 +861,6 @@ body {
 
 /* Projects Section */
 .projects-section {
-  padding: 8rem 2rem;
-  position: relative;
-  z-index: 10; /* This places it above the fixed bg-elements */
-
   background: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0) 0px,
@@ -864,16 +870,7 @@ body {
   );
 }
 
-.projects-container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
 .projects-headline {
-  font-family: "Oswald", sans-serif;
-  font-size: clamp(2.5rem, 4vw, 4rem);
-  font-weight: 300;
-  line-height: 1.2;
   text-align: center;
   margin-bottom: 5rem;
 }
@@ -991,9 +988,7 @@ body {
 
 /* Testimonials Section */
 .testimonials-section {
-  padding: 8rem 0;
-  position: relative;
-  z-index: 10;
+  padding: 8rem 0; /* Overrides global padding */
   overflow: hidden;
 }
 
@@ -1376,11 +1371,15 @@ body {
   }
 }
 
-/* Section 5 CTA */
+.cta-group {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .cta-section {
-  padding: 10rem 2rem;
-  position: relative;
-  z-index: 10;
+  padding: 10rem 2rem; /* Overrides global padding */
   text-align: center;
 }
 
@@ -1394,16 +1393,12 @@ body {
 }
 
 .cta-headline {
-  font-family: "Oswald", sans-serif;
   font-size: clamp(3rem, 5vw, 5rem);
-  font-weight: 300;
   line-height: 1.1;
 }
 
 .cta-subtitle {
-  color: var(--text-secondary);
   font-size: 1.25rem;
-  line-height: 1.6;
   max-width: 600px;
 }
 

@@ -30,7 +30,6 @@ O portfólio é estruturado em componentes modulares focados em oferecer uma ót
 
 - [x] Arquivo dados json para dados dinamicos (nome, foto, icones, etc...)
 - [ ] Colocar os icones que representa as tecnologias em cada seção de forma automatizada de acordo com que for adicionado em arquivo json de dados
-- [ ] Adicionar uma sessão de contato com formulário e integração com API de e-mail
 - [ ] Opção de baixar o portfólio em pdf como se fosse um currículo vitae
 - [ ] Automatizar a seção de projetos, adicionando automaticamente com os projetos hospedados no github
 - [ ] Implementar teste de performance, seo e acessibilidade
