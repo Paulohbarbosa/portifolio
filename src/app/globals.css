@@ -664,13 +664,25 @@ body {
   margin: 0 auto;
 }
 
-.timeline-headline {
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.title-section {
   font-family: "Oswald", sans-serif;
   font-size: clamp(2.5rem, 4vw, 4rem);
   font-weight: 300;
   line-height: 1.2;
   text-align: center;
-  margin-bottom: 6rem;
+  margin-bottom: 1rem;
+}
+.description-section {
+  color: var(--text-secondary);
+  font-size: 1.15rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .text-purple {
