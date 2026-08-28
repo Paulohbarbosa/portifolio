@@ -987,7 +987,6 @@ body {
 .testimonials-section {
   padding: 8rem 0;
   position: relative;
-  background-color: var(--bg-color); /* Retorna para o dark base */
   z-index: 10;
   overflow: hidden;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
@@ -1378,8 +1377,6 @@ body {
   position: relative;
   z-index: 10;
   text-align: center;
-  background-color: transparent; /* O bg-elements já é fixo por trás de tudo */
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .cta-container {

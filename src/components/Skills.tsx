@@ -66,7 +66,7 @@ export default function Skills() {
 
             <ul className="education-list">
               {data.education.map((edu) => (
-                <li className="edu-item">
+                <li className="edu-item" key={edu.title}>
                   <div className="edu-dot"></div>
                   <div className="edu-content">
                     <h4 className="edu-title">{edu.title}</h4>
