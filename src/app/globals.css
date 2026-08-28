@@ -960,6 +960,11 @@ body {
 
 .project-desc {
   color: var(--text-secondary);
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
   font-size: 0.95rem;
   line-height: 1.6;
 }

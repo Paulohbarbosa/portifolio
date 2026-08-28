@@ -157,27 +157,38 @@
       "description": "Lidera o front-end e a experiência do usuário para uma das principais edtechs de tecnologia do Brasil. Foco em modernização de stack (React/Next.js), animações complexas e criação de interfaces de aprendizado altamente imersivas."
     }
   ],
+  "projectsInfo": {
+    "primaryTitle": "Projetos que",
+    "secondaryTitle": "eu já criei",
+    "description": "Minha trajetória é marcada por projetos desafiadores. Cada desafio me proporcionou aprendizado e evolução como profissional."
+  },
   "projects": [
     {
       "title": "Design System Global",
+      "isFeatured": true,
       "badge": "Nubank",
       "year": "2021",
+      "img": "https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=800&auto=format&fit=crop",
       "description": "Construção do zero de uma biblioteca de componentes altamente reutilizável e documentada. O foco principal foi garantir acessibilidade (padrão WCAG AA) e performance. A adoção do Design System reduziu o tempo de prototipagem e desenvolvimento de novas features em mais de 40% em mais de 20 times internos.",
       "techs": ["React", "TypeScript", "Tailwind CSS"],
       "github": "#"
     },
     {
       "title": "Plataforma E-learning",
+      "isFeatured": false,
       "badge": "Asimov Academy",
       "year": "2024",
+      "img": "https://images.unsplash.com/photo-1501504905252-473c47e087f8?q=80&w=800&auto=format&fit=crop",
       "description": "Criação de um web app educacional focado em alto engajamento e retenção de usuários. A interface foi construída com foco absoluto em micro-interações e transições de página perfeitas, entregando uma experiência de usuário imersiva, muito semelhante à de um aplicativo nativo no celular.",
       "techs": ["Next.js", "Framer Motion", "GraphQL"],
       "github": "#"
     },
     {
       "title": "Dashboard Financeiro de Alta Performance",
+      "isFeatured": false,
       "badge": "Nubank",
       "year": "2021",
+      "img": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop",
       "description": "Desenvolvimento de uma interface crítica para visualização de transações financeiras em tempo real. O grande desafio técnico foi lidar com renderização de grandes volumes de dados. Através de virtualização de listas e otimização do ciclo de vida dos componentes, garantimos uma navegação fluida em 60fps sem travar a thread principal do navegador.",
       "techs": ["React", "TypeScript", "Tailwind CSS"],
       "github": "#"
