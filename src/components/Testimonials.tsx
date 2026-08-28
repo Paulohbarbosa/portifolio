@@ -15,7 +15,8 @@ export default function Testimonials() {
 
       <div className="marquee-container">
         <div className="marquee-content">
-          {data.testimonials.map((report, index) => (
+          {/* Duplicamos os depoimentos no array para o efeito de loop infinito do CSS */}
+          {[...data.testimonials, ...data.testimonials].map((report, index) => (
             <div className="testimonial-card glassmorphism" key={index}>
               <p className="testimonial-quote">{report.text}</p>
               <div className="testimonial-author">
