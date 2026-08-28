@@ -155,6 +155,18 @@
       "company": "Asimov Academy",
       "color": "blue",
       "description": "Lidera o front-end e a experiência do usuário para uma das principais edtechs de tecnologia do Brasil. Foco em modernização de stack (React/Next.js), animações complexas e criação de interfaces de aprendizado altamente imersivas."
+    },
+    {
+      "year": "2025",
+      "company": "Meta",
+      "color": "purple",
+      "description": "Desenvolvimento de uma interface crítica para visualização de transações financeiras em tempo real. O grande desafio técnico foi lidar com renderização de grandes volumes de dados. Através de virtualização de listas e otimização do ciclo de vida dos componentes, garantimos uma navegação fluida em 60fps sem travar a thread principal do navegador."
+    },
+    {
+      "year": "2026",
+      "company": "Microsoft",
+      "color": "blue",
+      "description": "Atuação no time de produtos de produtividade. Contribuição para o desenvolvimento de novas interfaces e otimização de performance em aplicações de grande escala. Foco em acessibilidade e experiência do usuário em produtos utilizados por milhões de pessoas."
     }
   ],
   "projectsInfo": {
