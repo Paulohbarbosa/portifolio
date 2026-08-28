@@ -3,52 +3,63 @@
     "firstName": "Paulo",
     "middleName": "Henrique dos Santos'",
     "lastName": "Barbosa",
-    "role": "Engenheiro de Software Front-end",
+    "role": "Front-end Developer",
     "shortBio": "Especialista em construir interfaces modernas, acessíveis e de alta performance.",
     "photo": "/paulo-barbosa-foto.png",
     "social": [
       {
-        "name": "GitHub",
-        "url": "https://github.com/seu-usuario",
-        "icon": "github"
+        "name": "gitHub",
+        "url": "https://github.com/seu-usuario"
       },
       {
-        "name": "LinkedIn",
-        "url": "https://linkedin.com/in/seu-usuario",
-        "icon": "linkedin"
+        "name": "linkedin",
+        "url": "https://linkedin.com/in/seu-usuario"
       },
       {
-        "name": "Whatsapp",
-        "url": "[TELEFONE_NUMBER]",
-        "icon": "whatsapp"
+        "name": "whatsapp",
+        "url": "[TELEFONE_NUMBER]"
       },
       {
         "name": "email",
-        "url": "[EMAIL_ADDRESS]",
-        "icon": "email"
+        "url": "[EMAIL_ADDRESS]"
       }
     ]
   },
-  "heroinformations": {
+  "heroInfo": {
     "primaryTitle": "Interfaces que engajam.",
     "secondaryTitle": "Códigos inteligentes.",
     "description": "Eu ajudo a transformar designs complexos em aplicações web rápidas, acessíveis e escaláveis para negócios que exigem excelência visual e performance."
   },
   "heroIcons": [
     {
+      "key": 1,
+      "name": "javascript",
+      "icon": "javascript",
+      "color": "247, 223, 30"
+    },
+    {
+      "key": 2,
       "name": "React",
       "icon": "react",
-      "color": "blue"
+      "color": "107, 217, 250"
     },
     {
-      "name": "Next.js",
-      "icon": "nextjs",
-      "color": "white"
-    },
-    {
+      "key": 3,
       "name": "Tailwind",
-      "icon": "tailwind",
-      "color": "cyan"
+      "icon": "tailwindcss",
+      "color": "38, 178, 172"
+    },
+    {
+      "key": 4,
+      "name": "TypeScript",
+      "icon": "typescript",
+      "color": "15, 157, 237"
+    },
+    {
+      "key": 5,
+      "name": "Nodejs",
+      "icon": "nodejs",
+      "color": "51, 153, 51"
     }
   ],
   "skillsInfo": {
