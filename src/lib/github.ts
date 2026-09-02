@@ -63,16 +63,27 @@ export async function getGithubProjects(username: string): Promise<GithubProject
             // 2. Extrair Tecnologias
             const techMatch = readmeText.match(/##[^#]*Tecnologias[\s\S]*?(?=##|$)/i);
             if (techMatch) {
-              // Regex para encontrar itens de lista no formato: - **[Nome](URL)** ou - **Nome**
-              const regex = /-\s+\*\*(?:\[(.*?)\]\(.*?\)|(.*?))\*\*/g;
-              let match;
+              const lines = techMatch[0].split('\n');
               const extractedTechs = [];
               
-              while ((match = regex.exec(techMatch[0])) !== null) {
-                // match[1] é o nome se tiver link, match[2] se for texto simples
-                const techName = match[1] || match[2];
-                if (techName) {
-                  extractedTechs.push(techName.trim());
+              for (const line of lines) {
+                // Procurar linhas que comecem com lista e negrito, ex: - **[Next.js](url)** ou - **React**:
+                const match = line.match(/^-\s+\*\*(.*?)\*\*/);
+                if (match) {
+                  let text = match[1];
+                  
+                  // Se for um link markdown [Nome](URL), extrair apenas o Nome
+                  const linkMatch = text.match(/^\[(.*?)\]\(.*?\)/);
+                  if (linkMatch) {
+                    text = linkMatch[1];
+                  }
+                  
+                  // Remover dois pontos no final (caso exista, ex: "React:")
+                  text = text.replace(/:$/, '').trim();
+                  
+                  if (text) {
+                    extractedTechs.push(text);
+                  }
                 }
               }
               
