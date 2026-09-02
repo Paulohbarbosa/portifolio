@@ -55,6 +55,7 @@ export async function getGithubProjects(username: string): Promise<GithubProject
               combinedDesc = combinedDesc
                 .replace(/!\[.*?\]\(.*?\)/g, "")  // Remove imagens
                 .replace(/<img[^>]*>/g, "")       // Remove tags de imagem HTML
+                .replace(/\[([^\]]+)\]\([^)]+\)/g, "<b>$1</b>") // Converte links [texto](url) para <b>texto</b>
                 .replace(/\*\*(.*?)\*\*/g, "<b>$1</b>") // Converte **texto** para <b>texto</b>
                 .trim();
               
