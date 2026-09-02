@@ -2,9 +2,17 @@
 
 import { useState } from "react";
 import data from "../data/portfolio.json";
+import { GithubProject } from "@/lib/github";
 
-export default function Projects() {
+interface ProjectsProps {
+  githubProjects?: GithubProject[];
+}
+
+export default function Projects({ githubProjects = [] }: ProjectsProps) {
   const [activeProject, setActiveProject] = useState<number | null>(null);
+
+  // Combine local data with github projects
+  const allProjects = [...(data.projects || []), ...githubProjects];
 
   const openModal = (index: number) => {
     setActiveProject(index);
@@ -21,7 +29,7 @@ export default function Projects() {
   };
 
   const currentProject =
-    activeProject !== null ? data.projects[activeProject] : null;
+    activeProject !== null ? allProjects[activeProject] : null;
 
   return (
     <>
@@ -41,11 +49,11 @@ export default function Projects() {
 
           <div className="projects-grid">
             {/* projeto em destaque */}
-            {data.projects.map((project, index) => {
+            {allProjects.map((project, index) => {
               if (!project.isFeatured) return null;
               return (
                 <div
-                  key={index}
+                  key={`featured-${index}`}
                   className="project-card featured reveal"
                   onClick={() => openModal(index)}
                 >
@@ -65,11 +73,11 @@ export default function Projects() {
             })}
 
             {/* demais projetos */}
-            {data.projects.map((project, index) => {
+            {allProjects.map((project, index) => {
               if (project.isFeatured) return null;
               return (
                 <div
-                  key={index}
+                  key={`normal-${index}`}
                   className="project-card reveal"
                   onClick={() => openModal(index)}
                 >
@@ -118,7 +126,7 @@ export default function Projects() {
                 </h3>
 
                 <div className="modal-tags">
-                  {currentProject.techs.map((tech, idx) => (
+                  {currentProject.techs?.map((tech, idx) => (
                     <span key={idx} className="modal-tag">
                       {tech}
                     </span>
@@ -130,6 +138,8 @@ export default function Projects() {
                 <div style={{ marginTop: "2.5rem" }}>
                   <a
                     href={currentProject.github || "#"}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="btn-primary"
                     style={{ padding: "0.75rem 2rem", borderRadius: "9999px" }}
                   >

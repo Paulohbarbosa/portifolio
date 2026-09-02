@@ -3,7 +3,11 @@
 ![Portfolio Project](https://img.shields.io/badge/portfolio-project-blue?style=for-the-badge)
 [![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)](https://www.paulobarbosa.dev.br/)
 
+## 📑 Descrição
+
 Este é um projeto de portfólio pessoal moderno e responsivo, desenvolvido para demonstrar habilidades, projetos, experiência e informações de contato.
+
+![Portfolio Project](https://opengraph.githubassets.com/1/Paulohbarbosa/portifolio)
 
 ## 🚀 Tecnologias Escolhidas
 
