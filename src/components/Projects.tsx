@@ -48,31 +48,7 @@ export default function Projects({ githubProjects = [] }: ProjectsProps) {
           </div>
 
           <div className="projects-grid">
-            {/* projeto em destaque */}
-            {allProjects.map((project, index) => {
-              if (!project.isFeatured) return null;
-              return (
-                <div
-                  key={`featured-${index}`}
-                  className="project-card featured reveal"
-                  onClick={() => openModal(index)}
-                >
-                  <div className="project-image">
-                    <img src={project.img} alt={project.title} />
-                    <div className="project-overlay"></div>
-                  </div>
-                  <div className="project-content">
-                    <div className="project-meta">
-                      {project.badge} &middot; {project.year}
-                    </div>
-                    <h3 className="project-title">{project.title}</h3>
-                    <p className="project-desc">{project.description}</p>
-                  </div>
-                </div>
-              );
-            })}
-
-            {/* demais projetos */}
+            {/* listagem de projetos */}
             {allProjects.map((project, index) => {
               if (project.isFeatured) return null;
               return (
@@ -90,7 +66,9 @@ export default function Projects({ githubProjects = [] }: ProjectsProps) {
                       {project.badge} &middot; {project.year}
                     </div>
                     <h3 className="project-title">{project.title}</h3>
-                    <p className="project-desc">{project.description}</p>
+                    <p className="project-desc">
+                      {project.description.replace(/<[^>]+>/g, "")}
+                    </p>
                   </div>
                 </div>
               );
@@ -133,9 +111,11 @@ export default function Projects({ githubProjects = [] }: ProjectsProps) {
                   ))}
                 </div>
 
-                <div 
-                  className="modal-desc" 
-                  dangerouslySetInnerHTML={{ __html: currentProject.description }} 
+                <div
+                  className="modal-desc"
+                  dangerouslySetInnerHTML={{
+                    __html: currentProject.description,
+                  }}
                 />
 
                 <div style={{ marginTop: "2.5rem" }}>
