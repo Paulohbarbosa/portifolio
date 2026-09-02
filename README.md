@@ -5,14 +5,9 @@
 
 ## 📑 Descrição
 
-Este é um projeto de portfólio pessoal moderno e responsivo, desenvolvido para demonstrar habilidades, projetos, experiência e informações de contato.
+Este é um projeto de portfólio pessoal moderno e responsivo, desenvolvido para demonstrar habilidades, projetos, experiência e informações de contato, desenvolvido com o apoio da [Asimov Academy](https://www.asimov.academy/), onde estudo atualmente.
 
 ![Portfolio Project](https://opengraph.githubassets.com/1/Paulohbarbosa/portifolio)
-
-## Instituição
-
-[Asimov Academy](https://www.asimov.academy/),
-Este projeto foi desenvolvido com o apoio da Asimov, onde estudo atualmente.
 
 ## 🚀 Tecnologias
 

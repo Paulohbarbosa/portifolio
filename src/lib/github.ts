@@ -50,6 +50,12 @@ export async function getGithubProjects(username: string): Promise<GithubProject
             if (descMatch) {
               let text = descMatch[0].replace(/##.*?Descrição.*/i, "").trim();
               combinedDesc = text;
+
+              // Extrai inteligentemente o primeiro link markdown da descrição para usar no Badge!
+              const firstLinkMatch = text.match(/\[([^\]]+)\]\([^)]+\)/);
+              if (firstLinkMatch) {
+                institutionBadge = firstLinkMatch[1];
+              }
             }
 
             if (combinedDesc.trim()) {
@@ -102,24 +108,6 @@ export async function getGithubProjects(username: string): Promise<GithubProject
               
               if (extractedTechs.length > 0) {
                 techs = extractedTechs;
-              }
-            }
-
-            // 3. Extrair Instituição (para o Badge)
-            const companyMatch = readmeText.match(/##[^#]*(?:Instituição|Empresa)[\s\S]*?(?=##|$)/i);
-            if (companyMatch) {
-              let text = companyMatch[0].replace(/##.*?(?:Instituição|Empresa).*/i, "").trim();
-              
-              // Se tiver um link [Nome](URL), prioriza o nome no link
-              const linkMatch = text.match(/\[(.*?)\]/);
-              if (linkMatch) {
-                institutionBadge = linkMatch[1];
-              } else {
-                // Caso contrário, pega a primeira linha sem tags HTML e limita o tamanho
-                text = text.replace(/<[^>]*>/g, '').split('\n')[0].trim();
-                if (text) {
-                  institutionBadge = text.length > 30 ? text.substring(0, 30) + "..." : text;
-                }
               }
             }
           }
