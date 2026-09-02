@@ -11,7 +11,7 @@ Este é um projeto de portfólio pessoal moderno e responsivo, desenvolvido para
 
 ## Instituição
 
-Este projeto foi desenvolvido para a instituição com a Asimov, qual estudo atualmente [Asimov Academy](https://www.asimov.academy/)!
+Este projeto foi desenvolvido com a Asimov [Asimov Academy](https://www.asimov.academy/), onde estudo atualmente.
 
 ## 🚀 Tecnologias
 

@@ -32,6 +32,7 @@ export async function getGithubProjects(username: string): Promise<GithubProject
       data.items.map(async (repo: any) => {
         let description = repo.description || "Projeto desenvolvido e disponibilizado no GitHub.";
         let techs = repo.topics.filter((topic: string) => topic !== "portfolio-project");
+        let institutionBadge = "GitHub Repo";
 
         try {
           const readmeRes = await fetch(
@@ -103,6 +104,24 @@ export async function getGithubProjects(username: string): Promise<GithubProject
                 techs = extractedTechs;
               }
             }
+
+            // 3. Extrair Instituição (para o Badge)
+            const companyMatch = readmeText.match(/##[^#]*(?:Instituição|Empresa)[\s\S]*?(?=##|$)/i);
+            if (companyMatch) {
+              let text = companyMatch[0].replace(/##.*?(?:Instituição|Empresa).*/i, "").trim();
+              
+              // Se tiver um link [Nome](URL), prioriza o nome no link
+              const linkMatch = text.match(/\[(.*?)\]/);
+              if (linkMatch) {
+                institutionBadge = linkMatch[1];
+              } else {
+                // Caso contrário, pega a primeira linha sem tags HTML e limita o tamanho
+                text = text.replace(/<[^>]*>/g, '').split('\n')[0].trim();
+                if (text) {
+                  institutionBadge = text.length > 30 ? text.substring(0, 30) + "..." : text;
+                }
+              }
+            }
           }
         } catch (e) {
           console.error("Failed to parse README for", repo.name, e);
@@ -133,7 +152,7 @@ export async function getGithubProjects(username: string): Promise<GithubProject
           techs,
           img,
           year: new Date(repo.created_at).getFullYear().toString(),
-          badge: "GitHub Repo",
+          badge: institutionBadge,
           isFeatured: repo.stargazers_count > 0 || repo.topics.includes("featured"),
         };
       })
