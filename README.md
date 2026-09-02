@@ -9,7 +9,7 @@ Este é um projeto de portfólio pessoal moderno e responsivo, desenvolvido para
 
 ![Portfolio Project](https://opengraph.githubassets.com/1/Paulohbarbosa/portifolio)
 
-## 🚀 Tecnologias Escolhidas
+## 🚀 Tecnologias
 
 O projeto foi construído utilizando as seguintes tecnologias:
 
