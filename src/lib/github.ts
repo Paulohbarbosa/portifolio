@@ -96,12 +96,30 @@ export async function getGithubProjects(username: string): Promise<GithubProject
           console.error("Failed to parse README for", repo.name, e);
         }
 
+        // Tentar buscar a imagem oficial exata que o GitHub está usando (isso resolve o cache e imagens customizadas!)
+        let img = `https://opengraph.githubassets.com/1/${username}/${repo.name}`;
+        
+        try {
+          // Acessamos a página do repositório no GitHub para ler a tag <meta property="og:image">
+          const htmlRes = await fetch(repo.html_url, { next: { revalidate: 10 } });
+          if (htmlRes.ok) {
+            const htmlText = await htmlRes.text();
+            // Expressão regular para pegar a imagem exata do Social Preview oficial da página
+            const ogImageMatch = htmlText.match(/<meta property="og:image" content="([^"]+)"/);
+            if (ogImageMatch && ogImageMatch[1]) {
+              img = ogImageMatch[1];
+            }
+          }
+        } catch (e) {
+          console.error("Failed to fetch og:image for", repo.name, e);
+        }
+
         return {
           title: repo.name.replace(/-/g, " "),
           description,
           github: repo.html_url,
           techs,
-          img: `https://opengraph.githubassets.com/1/${username}/${repo.name}`,
+          img,
           year: new Date(repo.created_at).getFullYear().toString(),
           badge: "GitHub Repo",
           isFeatured: repo.stargazers_count > 0 || repo.topics.includes("featured"),

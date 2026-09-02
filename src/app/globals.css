@@ -909,7 +909,7 @@ body {
 .project-image {
   position: relative;
   width: 100%;
-  aspect-ratio: 16/10;
+  aspect-ratio: 2/1;
   overflow: hidden;
   background-color: #111;
 }
@@ -919,12 +919,18 @@ body {
 }
 
 .project-card.featured .project-image {
-  aspect-ratio: 21 / 9;
+  aspect-ratio: 2/1;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1280px) {
   .project-card.featured .project-image {
-    aspect-ratio: 16 / 10;
+    aspect-ratio: 2/1;
+  }
+}
+
+@media (max-width: 1080px) {
+  .project-card.featured .project-image {
+    aspect-ratio: 2/1;
   }
 }
 
@@ -972,6 +978,7 @@ body {
   font-size: 1.5rem;
   margin-bottom: 1rem;
   line-height: 1.3;
+  text-transform: capitalize;
   color: var(--text-primary);
 }
 
@@ -1021,7 +1028,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 1.5rem;
   width: 90%;
-  max-width: 950px;
+  max-width: 1300px; /* Aumentado de 950px para dar mais espaço */
   max-height: 90vh;
   overflow-y: auto;
   position: relative;
@@ -1065,7 +1072,8 @@ body {
 
 @media (min-width: 768px) {
   .modal-body {
-    grid-template-columns: 1fr 1fr;
+    /* Dar mais espaço para a imagem (aprox 60% img, 40% texto) */
+    grid-template-columns: 2.5fr 1fr;
   }
 }
 
@@ -1086,7 +1094,7 @@ body {
   border-radius: 1.5rem 1.5rem 0 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1280px) {
   .modal-image-wrapper img {
     border-radius: 1.5rem 0 0 1.5rem;
   }
