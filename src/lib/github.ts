@@ -42,22 +42,25 @@ export async function getGithubProjects(username: string): Promise<GithubProject
           if (readmeRes.ok) {
             const readmeText = await readmeRes.text();
             
-            // 1. Extrair Descrição
+            // 1. Extrair Apenas a Descrição
+            let combinedDesc = "";
+            
             const descMatch = readmeText.match(/##[^#]*Descrição[\s\S]*?(?=##|$)/i);
             if (descMatch) {
-              let descText = descMatch[0]
-                .replace(/##.*?Descrição.*/i, "") // Remove o título
-                .replace(/!\[.*?\]\(.*?\)/g, "")  // Remove imagens Markdown
-                .replace(/<[^>]*>?/gm, '')        // Remove tags HTML
+              let text = descMatch[0].replace(/##.*?Descrição.*/i, "").trim();
+              combinedDesc = text;
+            }
+
+            if (combinedDesc.trim()) {
+              combinedDesc = combinedDesc
+                .replace(/!\[.*?\]\(.*?\)/g, "")  // Remove imagens
+                .replace(/<img[^>]*>/g, "")       // Remove tags de imagem HTML
+                .replace(/\*\*(.*?)\*\*/g, "<b>$1</b>") // Converte **texto** para <b>texto</b>
                 .trim();
               
-              if (descText) {
-                // Pega apenas o primeiro parágrafo de texto
-                const paragraphs = descText.split(/\n\s*\n/).map(p => p.trim()).filter(p => p.length > 0);
-                if (paragraphs.length > 0) {
-                  description = paragraphs[0];
-                }
-              }
+              // Remove múltiplos <br> vazios resultantes de quebras de linha
+              combinedDesc = combinedDesc.replace(/\n{3,}/g, '\n\n').replace(/\n/g, '<br/>');
+              description = combinedDesc;
             }
 
             // 2. Extrair Tecnologias
@@ -67,21 +70,29 @@ export async function getGithubProjects(username: string): Promise<GithubProject
               const extractedTechs = [];
               
               for (const line of lines) {
-                // Procurar linhas que comecem com lista e negrito, ex: - **[Next.js](url)** ou - **React**:
-                const match = line.match(/^-\s+\*\*(.*?)\*\*/);
+                // Procurar linhas de lista que comecem com "-", "*" ou "+" (com ou sem espaços antes)
+                const match = line.match(/^\s*[-\*\+]\s+(.*)/);
                 if (match) {
                   let text = match[1];
                   
-                  // Se for um link markdown [Nome](URL), extrair apenas o Nome
-                  const linkMatch = text.match(/^\[(.*?)\]\(.*?\)/);
+                  // Se tiver link [Nome](URL), pega o nome
+                  const linkMatch = text.match(/\[(.*?)\]/);
                   if (linkMatch) {
                     text = linkMatch[1];
+                  } else {
+                    // Se tiver negrito **Nome**
+                    const boldMatch = text.match(/\*\*(.*?)\*\*/);
+                    if (boldMatch) {
+                      text = boldMatch[1];
+                    } else {
+                      // Pega apenas a primeira parte antes do traço "-" ou ":"
+                      text = text.split(/[-:]/)[0];
+                    }
                   }
                   
-                  // Remover dois pontos no final (caso exista, ex: "React:")
-                  text = text.replace(/:$/, '').trim();
+                  text = text.replace(/[*:]/g, '').trim();
                   
-                  if (text) {
+                  if (text && text.length < 30) { // Ignora descrições longas que vazaram
                     extractedTechs.push(text);
                   }
                 }

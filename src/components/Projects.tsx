@@ -133,7 +133,10 @@ export default function Projects({ githubProjects = [] }: ProjectsProps) {
                   ))}
                 </div>
 
-                <p className="modal-desc">{currentProject.description}</p>
+                <div 
+                  className="modal-desc" 
+                  dangerouslySetInnerHTML={{ __html: currentProject.description }} 
+                />
 
                 <div style={{ marginTop: "2.5rem" }}>
                   <a
