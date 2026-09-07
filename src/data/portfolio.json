@@ -17,11 +17,11 @@
       },
       {
         "name": "whatsapp",
-        "url": "[TELEFONE_NUMBER]"
+        "url": "#contato"
       },
       {
         "name": "email",
-        "url": "[EMAIL_ADDRESS]"
+        "url": "#contato"
       }
     ]
   },
