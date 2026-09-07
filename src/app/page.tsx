@@ -1,3 +1,5 @@
+import { Analytics } from "@vercel/analytics/next";
+
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Skills from "@/components/Skills";
