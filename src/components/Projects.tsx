@@ -12,7 +12,7 @@ export default function Projects({ githubProjects = [] }: ProjectsProps) {
   const [activeProject, setActiveProject] = useState<number | null>(null);
 
   // Combine local data with github projects
-  const allProjects = [...(data.projects || []), ...githubProjects];
+  const allProjects = [...((data as any).projects || []), ...githubProjects];
 
   const openModal = (index: number) => {
     setActiveProject(index);
@@ -104,7 +104,7 @@ export default function Projects({ githubProjects = [] }: ProjectsProps) {
                 </h3>
 
                 <div className="modal-tags">
-                  {currentProject.techs?.map((tech, idx) => (
+                  {currentProject.techs?.map((tech: string, idx: number) => (
                     <span key={idx} className="modal-tag">
                       {tech}
                     </span>
