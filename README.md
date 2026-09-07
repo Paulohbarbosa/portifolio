@@ -2,6 +2,9 @@
 
 ![Portfolio Project](https://img.shields.io/badge/portfolio-project-blue?style=for-the-badge)
 [![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)](https://www.paulobarbosa.dev.br/)
+<h4 align="center"> 
+	🚧  Em construção...  🚧
+</h4>
 
 ## 📑 Descrição
 
