@@ -43,17 +43,54 @@ export default function ContactForm() {
 
   if (status === "success") {
     return (
-      <div className="contact-form-success flex flex-col items-center text-center p-8 bg-zinc-900/50 rounded-2xl border border-zinc-800">
-        <h3 className="text-2xl font-semibold mb-4 text-white">
-          Mensagem enviada com sucesso!
+      <div className="contact-form-success flex flex-col gap-4 items-center text-center p-10 relative mx-auto w-full max-w-lg">
+        {/* Glow effect */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-blue-500/20 rounded-full blur-[40px] -z-10 pointer-events-none"></div>
+
+        {/* Success Icon */}
+        <div className="w-16 h-16 bg-blue-500/10 rounded-full flex items-center justify-center mb-6 border border-blue-500/20 shadow-[0_0_15px_rgba(59,130,235,0.2)]">
+          <svg
+            className="w-8 h-8 text-blue-400"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2.5}
+              d="M5 13l4 4L19 7"
+            />
+          </svg>
+        </div>
+
+        <h3 className="text-2xl sm:text-3xl font-semibold mb-3 text-white">
+          Mensagem <span className="text-blue-400">Enviada!</span>
         </h3>
-        <p className="text-zinc-400 mb-8">
-          Obrigado pelo contato, retornarei o mais breve possível.
+
+        <p className="text-zinc-400 mb-10 max-w-sm">
+          Obrigado pelo contato. Recebi sua mensagem e retornarei o mais breve
+          possível!
         </p>
-        <button className="btn-beam" onClick={() => setStatus("idle")}>
+
+        <button
+          className="btn-beam w-full sm:w-auto"
+          onClick={() => setStatus("idle")}
+        >
           <div className="beam-border"></div>
-          <div className="btn-content-bg"></div>
-          <span style={{ position: "relative", zIndex: 10 }}>
+          <div className="btn-content-bg">
+            <div className="lines-overlay"></div>
+            <div className="bottom-glow"></div>
+          </div>
+          <span
+            style={{
+              position: "relative",
+              zIndex: 10,
+              display: "flex",
+              alignItems: "center",
+              gap: "0.5rem",
+            }}
+          >
             Enviar outra mensagem
           </span>
         </button>
@@ -133,9 +170,33 @@ export default function ContactForm() {
       </button>
 
       {status === "error" && (
-        <p className="text-red-400 text-sm mt-2">
-          Ocorreu um erro ao enviar sua mensagem. Tente novamente mais tarde.
-        </p>
+        <div className="mt-6 flex items-center gap-3 p-4 bg-red-500/10 border border-red-500/20 rounded-xl relative overflow-hidden">
+          <div className="absolute top-0 left-0 w-1 h-full bg-red-500"></div>
+          <div className="w-10 h-10 bg-red-500/20 rounded-full flex items-center justify-center flex-shrink-0">
+            <svg
+              className="w-5 h-5 text-red-400"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+          </div>
+          <div>
+            <h4 className="text-red-400 font-semibold text-sm">
+              Falha no Envio
+            </h4>
+            <p className="text-zinc-400 text-xs mt-1">
+              Ocorreu um erro ao enviar sua mensagem. Verifique a URL do seu
+              servidor de mensagens e tente novamente.
+            </p>
+          </div>
+        </div>
       )}
     </form>
   );
