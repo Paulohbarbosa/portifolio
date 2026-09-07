@@ -24,7 +24,7 @@ export default async function Home() {
 
       <Navbar />
       <Hero />
-      <Skills />
+      <Skills githubProjects={githubProjects} />
       <Radar />
       <Timeline />
       <Projects githubProjects={githubProjects} />
