@@ -9,11 +9,11 @@
     "social": [
       {
         "name": "gitHub",
-        "url": "https://github.com/seu-usuario"
+        "url": "https://github.com/Paulohbarbosa"
       },
       {
         "name": "linkedin",
-        "url": "https://linkedin.com/in/seu-usuario"
+        "url": "https://www.linkedin.com/in/paulo-henrique-barbosa-495492160/"
       },
       {
         "name": "whatsapp",
@@ -217,7 +217,8 @@
     "primaryTitle": "Vamos criar algo incrível juntos?",
     "secondaryTitle": "Pronto pra transformar suas ideias em realidade?",
     "description": "Seja um projeto novo, uma consultoria ou uma parceria, adoraria fazer parte da sua jornada. Vamos tomar um café e conversar sobre como posso agregar valor ao seu negócio.",
-    "buttonText": "Vamos Conversar"
+    "buttonText": "Vamos Conversar",
+    "buttonUrl": "COLOQUE_SEU_LINK_AQUI"
   },
   "footer": {
     "description": "Desenvolvido com paixão, código e design.",

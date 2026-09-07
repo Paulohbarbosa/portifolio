@@ -1,6 +1,8 @@
 import data from "@/data/portfolio.json";
 
 export default function CTA() {
+  const whatsappUrl = process.env.WHATSAPP_LINK || data?.ctaInfo.buttonUrl || "#contato";
+
   return (
     <section id="contato" className="cta-section reveal">
       <div className="cta-container">
@@ -12,7 +14,9 @@ export default function CTA() {
         <p className="cta-subtitle">{data?.ctaInfo.description}</p>
 
         <a
-          href="#contato"
+          href={whatsappUrl}
+          target={whatsappUrl !== "#contato" ? "_blank" : undefined}
+          rel={whatsappUrl !== "#contato" ? "noopener noreferrer" : undefined}
           className="btn-beam"
           style={{ height: "64px", padding: "0 3rem", fontSize: "1rem" }}
         >
