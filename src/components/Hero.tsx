@@ -12,7 +12,10 @@ export default function Hero() {
     <main className="hero">
       <div className="hero-container">
         <div className="hero-content">
-          <div className="badge fade-in-up" style={{ animationDelay: "0.1s" }}>
+          <div
+            className="badge fade-in-up flex gap-4"
+            style={{ animationDelay: "0.1s" }}
+          >
             <span className="badge-pill bg-blue-500/10">
               {data.personalInfo.role}
             </span>

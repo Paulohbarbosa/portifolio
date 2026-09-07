@@ -225,7 +225,6 @@ body {
 }
 
 .badge-pill {
-  /* background: rgba(59, 130, 235, 0.2); */
   color: var(--accent-blue);
   padding: 0.25rem 0.6rem;
   border-radius: 9999px;
@@ -233,11 +232,14 @@ body {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  margin-right: 0.75rem;
 }
 
 .badge-text {
   font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.badge-text-no-select {
   color: var(--text-secondary);
 }
 
@@ -425,6 +427,39 @@ body {
   .card-2 {
     right: 0;
   }
+}
+
+/* CAMPOS DE TEXTO */
+.input {
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  background: rgba(59, 130, 235, 0.1);
+  border: 1px solid rgba(59, 130, 235, 0.2);
+  color: var(--accent-blue);
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.textarea {
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  background: rgba(59, 130, 235, 0.1);
+  border: 1px solid rgba(59, 130, 235, 0.2);
+  color: var(--accent-blue);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  resize: none;
+}
+.input:focus,
+.textarea:focus,
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: rgba(59, 130, 235, 0.5);
+  box-shadow: 0 0 0 2px rgba(59, 130, 235, 0.2);
 }
 
 /* ---------------------------------
