@@ -22,6 +22,10 @@
       {
         "name": "email",
         "url": "#contato"
+      },
+      {
+        "name": "curriculo",
+        "url": "/cv"
       }
     ]
   },

@@ -5,7 +5,7 @@ import {
   faLinkedin,
   faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faFile } from "@fortawesome/free-solid-svg-icons";
 
 export default function Hero() {
   return (
@@ -56,7 +56,7 @@ export default function Hero() {
               </span>
             </a>
 
-            <div style={{ display: "flex", gap: "1rem" }}>
+            <div style={{ display: "flex", gap: "0.5rem" }}>
               {data.personalInfo.social.map((social) => {
                 let icon;
                 switch (social.name) {
@@ -72,6 +72,9 @@ export default function Hero() {
                   case "email":
                     icon = faEnvelope;
                     break;
+                  case "curriculo":
+                    icon = faFile;
+                    break;
                   default:
                     icon = faGithub;
                 }
@@ -81,7 +84,7 @@ export default function Hero() {
                     key={social.name}
                     href={social.url}
                     className="btn-beam"
-                    style={{ padding: "0 1.2rem" }}
+                    style={{ padding: "0 1rem" }}
                     aria-label={social.name}
                   >
                     <div className="btn-content-bg"></div>
