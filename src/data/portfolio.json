@@ -154,34 +154,28 @@
   },
   "timelineExperiences": [
     {
-      "year": "2020",
-      "company": "Nubank",
-      "color": "blue",
-      "description": "Desenvolvedor Front-end no time de Design System. Primeiro contato com arquitetura web em escala: criação de bibliotecas de componentes, foco rigoroso em acessibilidade e interfaces fluidas para milhões de usuários."
-    },
-    {
-      "year": "2022",
-      "company": "Google",
+      "year": "2024 - atual",
+      "company": "Escola Construido Sonhos",
       "color": "purple",
-      "description": "Integrou o time de engenharia de interface de produto. Trabalhou diretamente com otimização de Core Web Vitals, performance de renderização e desenvolvimento de micro-frontends usados por squads globais."
+      "description": "Faço parte de adiministrativo da escola, responsável pelo suporte em TI e processos internos,desenvolvo a plataforma administrativa."
     },
     {
-      "year": "2024",
-      "company": "Asimov Academy",
+      "year": "2025 - atual",
+      "company": "IEADNP",
       "color": "blue",
-      "description": "Lidera o front-end e a experiência do usuário para uma das principais edtechs de tecnologia do Brasil. Foco em modernização de stack (React/Next.js), animações complexas e criação de interfaces de aprendizado altamente imersivas."
+      "description": "Desenvolvedor Front-end do sistema de gerenciamente e financeiro dos membros da igreja."
     },
     {
-      "year": "2025",
-      "company": "Meta",
+      "year": "2017 - 2022",
+      "company": "Freelancer",
       "color": "purple",
-      "description": "Desenvolvimento de uma interface crítica para visualização de transações financeiras em tempo real. O grande desafio técnico foi lidar com renderização de grandes volumes de dados. Através de virtualização de listas e otimização do ciclo de vida dos componentes, garantimos uma navegação fluida em 60fps sem travar a thread principal do navegador."
+      "description": "Manutenção de micro-computadores em residências e empresas de pequeno porte, suporte técnico em geral, instalação de software e hardware, configuração de redes, recuperação de dados, etc..."
     },
     {
-      "year": "2026",
-      "company": "Microsoft",
+      "year": "2014 - 2016",
+      "company": "UNEB",
       "color": "blue",
-      "description": "Atuação no time de produtos de produtividade. Contribuição para o desenvolvimento de novas interfaces e otimização de performance em aplicações de grande escala. Foco em acessibilidade e experiência do usuário em produtos utilizados por milhões de pessoas."
+      "description": "Atuação como técnico em informatica na secretaria do Mestrado PPED"
     }
   ],
   "projectsInfo": {
