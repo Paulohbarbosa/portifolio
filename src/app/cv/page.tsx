@@ -39,8 +39,9 @@ export default async function CVPage() {
 
       <section className="cv-section">
         <h2 className="cv-section-title">Resumo Profissional</h2>
-        <p className="cv-text">{data.personalInfo.shortBio}</p>
-        <p className="cv-text">{data.heroInfo.description}</p>
+        <p className="cv-text">
+          {data.personalInfo.shortBio} {data.heroInfo.description}
+        </p>
       </section>
 
       <section className="cv-section">
@@ -94,7 +95,7 @@ export default async function CVPage() {
         {githubProjects.slice(0, 4).map((project, idx) => (
           <div key={idx} className="cv-item">
             <div className="cv-item-header">
-              <span className="cv-item-title">{project.title}</span>
+              <span className="cv-item-title ">{project.title}</span>
               <span className="cv-item-date">{project.year}</span>
             </div>
             {project.techs && (

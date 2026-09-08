@@ -1,7 +1,7 @@
 .cv-container {
   background-color: #ffffff;
   color: #1a1a1a;
-  font-family: 'Inter', 'Roboto', 'Helvetica', sans-serif;
+  font-family: "Inter", "Roboto", "Helvetica", sans-serif;
   max-width: 800px;
   margin: 0 auto;
   padding: 40px 20px;
@@ -98,6 +98,7 @@
   font-weight: 600;
   font-size: 1.1rem;
   color: #111827;
+  text-transform: capitalize;
 }
 
 .cv-item-subtitle {
@@ -139,18 +140,21 @@
     --bg-color: #ffffff !important;
     --text-primary: #000000 !important;
   }
-  
+
   body {
     background-color: #ffffff !important;
     color: #000000 !important;
   }
-  
+
   .cv-print-btn {
     display: none !important;
   }
-  
+
   /* Esconder navegação e fundo escuro se houver restos no global */
-  nav, footer, .bg-elements, .grid-overlay {
+  nav,
+  footer,
+  .bg-elements,
+  .grid-overlay {
     display: none !important;
   }
 
@@ -160,16 +164,16 @@
     box-shadow: none !important;
     margin: 0 !important;
   }
-  
+
   .cv-section {
     margin-bottom: 20px;
   }
-  
+
   .cv-item {
     page-break-inside: avoid;
     break-inside: avoid;
   }
-  
+
   .cv-skill-tag {
     border: 1px solid #000;
     background-color: transparent;
