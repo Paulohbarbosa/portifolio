@@ -1,0 +1,187 @@
+.cv-container {
+  background-color: #ffffff;
+  color: #1a1a1a;
+  font-family: 'Inter', 'Roboto', 'Helvetica', sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  line-height: 1.6;
+}
+
+.cv-header {
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.cv-name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 5px;
+}
+
+.cv-role {
+  font-size: 1.25rem;
+  color: #4b5563;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.cv-contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  font-size: 0.9rem;
+}
+
+.cv-contact a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.cv-contact a:hover {
+  text-decoration: underline;
+}
+
+.cv-section {
+  margin-bottom: 30px;
+}
+
+.cv-section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #111827;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.cv-text {
+  font-size: 1rem;
+  color: #374151;
+  margin-bottom: 10px;
+}
+
+.cv-skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.cv-skill-tag {
+  background-color: #f3f4f6;
+  color: #374151;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid #e5e7eb;
+}
+
+.cv-item {
+  margin-bottom: 20px;
+}
+
+.cv-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 5px;
+}
+
+.cv-item-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #111827;
+}
+
+.cv-item-subtitle {
+  font-weight: 500;
+  color: #4b5563;
+}
+
+.cv-item-date {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.cv-item-desc {
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+.cv-print-btn {
+  display: block;
+  margin: 0 auto 30px;
+  padding: 10px 20px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.cv-print-btn:hover {
+  background-color: #1d4ed8;
+}
+
+@media print {
+  /* Override global dark theme variables for printing */
+  :root {
+    --bg-color: #ffffff !important;
+    --text-primary: #000000 !important;
+  }
+  
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+  }
+  
+  .cv-print-btn {
+    display: none !important;
+  }
+  
+  /* Esconder navegação e fundo escuro se houver restos no global */
+  nav, footer, .bg-elements, .grid-overlay {
+    display: none !important;
+  }
+
+  .cv-container {
+    padding: 0;
+    max-width: 100%;
+    box-shadow: none !important;
+    margin: 0 !important;
+  }
+  
+  .cv-section {
+    margin-bottom: 20px;
+  }
+  
+  .cv-item {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  
+  .cv-skill-tag {
+    border: 1px solid #000;
+    background-color: transparent;
+    color: #000;
+  }
+
+  a {
+    text-decoration: none !important;
+    color: #000 !important;
+  }
+
+  @page {
+    margin: 2cm;
+  }
+}
