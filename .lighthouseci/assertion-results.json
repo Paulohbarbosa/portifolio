@@ -267,9 +267,9 @@
   {
     "name": "minScore",
     "expected": 0.9,
-    "actual": 0.79,
+    "actual": 0.87,
     "values": [
-      0.79
+      0.87
     ],
     "operator": ">=",
     "passed": false,
@@ -376,9 +376,9 @@
   {
     "name": "minScore",
     "expected": 0.9,
-    "actual": 0.87,
+    "actual": 0.79,
     "values": [
-      0.87
+      0.79
     ],
     "operator": ">=",
     "passed": false,
@@ -528,9 +528,9 @@
   {
     "name": "minScore",
     "expected": 0.9,
-    "actual": 0.27,
+    "actual": 0.26,
     "values": [
-      0.27
+      0.26
     ],
     "operator": ">=",
     "passed": false,
