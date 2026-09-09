@@ -21,6 +21,7 @@ O projeto foi construído utilizando as seguintes tecnologias:
 - **[React 19](https://react.dev/):** Biblioteca principal para a construção de interfaces de usuário interativas e dinâmicas, baseadas em componentes reutilizáveis.
 - **[TypeScript](https://www.typescriptlang.org/):** Superconjunto de JavaScript que adiciona tipagem estática, proporcionando maior segurança no código, prevenindo erros em tempo de execução e facilitando a manutenção a longo prazo.
 - **[Tailwind CSS v4](https://tailwindcss.com/):** Framework CSS _utility-first_ que permite a estilização rápida e responsiva diretamente no markup, facilitando a criação de designs customizados e estéticas ricas.
+- **[Lighthouse CI](https://github.com/GoogleChrome/lighthouse-ci):** Ferramenta automatizada do Google utilizada para rodar testes de performance, SEO, acessibilidade e melhores práticas em cada build.
 
 ## ✨ Características e Seções do Projeto
 
@@ -40,7 +41,7 @@ O portfólio é estruturado em componentes modulares focados em oferecer uma ót
 - [x] Colocar os icones que representa as tecnologias em cada seção de forma automatizada de acordo com que for adicionado em arquivo json de dados
 - [x] Opção de baixar o portfólio em pdf como se fosse um currículo vitae
 - [x] Automatizar a seção de projetos, adicionando automaticamente com os projetos hospedados no github
-- [ ] Implementar teste de performance, seo e acessibilidade
+- [x] Implementar teste de performance, seo e acessibilidade (Lighthouse CI)
 
 ## 📦 Como executar o projeto localmente
 
