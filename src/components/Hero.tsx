@@ -87,7 +87,7 @@ export default function Hero() {
                     style={{ padding: "0 1rem" }}
                     aria-label={social.name}
                   >
-                    <div className="btn-content-bg"></div>
+                    <div className="btn-content-bg" title={social.name}></div>
                     <span
                       style={{
                         position: "relative",
