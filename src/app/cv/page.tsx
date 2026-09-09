@@ -23,14 +23,27 @@ export default async function CVPage() {
         <div className="cv-contact">
           {data.personalInfo.social.map((social) => {
             if (social.name === "curriculo") return null;
+
+            let url = social.url;
+            let displayText =
+              social.name.charAt(0).toUpperCase() + social.name.slice(1);
+
+            if (social.name === "whatsapp") {
+              url = process.env.NEXT_PUBLIC_WHATSAPP_LINK || url;
+              displayText = "WhatsApp";
+            } else if (social.name === "email") {
+              url = "/?tab=email#contato"; // Redireciona para o formulário na página inicial
+              displayText = "E-mail";
+            }
+
             return (
               <a
                 key={social.name}
-                href={social.url}
+                href={url}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {social.name.charAt(0).toUpperCase() + social.name.slice(1)}
+                {displayText}
               </a>
             );
           })}

@@ -1,11 +1,21 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import data from "@/data/portfolio.json";
 import ContactForm from "./ContactForm";
 
 export default function CTA() {
   const [activeTab, setActiveTab] = useState<"whatsapp" | "email">("whatsapp");
+  
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get("tab") === "email") {
+        setActiveTab("email");
+      }
+    }
+  }, []);
+
   const whatsappUrl =
     process.env.NEXT_PUBLIC_WHATSAPP_LINK ||
     data?.ctaInfo.buttonUrl ||
