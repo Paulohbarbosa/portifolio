@@ -148,8 +148,8 @@
     }
   ],
   "experienceInfo": {
-    "primaryTitle": "Do pixel à produção:",
-    "secondaryTitle": "Trajetória construída com grandes empresas.",
+    "primaryTitle": "Do pixel",
+    "secondaryTitle": "à produção.",
     "description": "Minha trajetória profissional é marcada pela paixão em criar interfaces que unem estética, performance e acessibilidade. Cada experiência me ajudou a evoluir como profissional e a construir uma base sólida para os projetos que desenvolvo."
   },
   "timelineExperiences": [
@@ -157,13 +157,13 @@
       "year": "2024 - atual",
       "company": "Escola Construido Sonhos",
       "color": "purple",
-      "description": "Faço parte de adiministrativo da escola, responsável pelo suporte em TI e processos internos,desenvolvo a plataforma administrativa."
+      "description": "Faço parte da equipe administrativa da escola, responsável pelo suporte em TI, processos internos e desenvolvimento de sistemas internos."
     },
     {
       "year": "2025 - atual",
       "company": "IEADNP",
       "color": "blue",
-      "description": "Desenvolvedor Front-end do sistema de gerenciamente e financeiro dos membros da igreja."
+      "description": "Desenvolvedor Front-end do sistema de gerenciamente e financeiro dos membros."
     },
     {
       "year": "2017 - 2022",
