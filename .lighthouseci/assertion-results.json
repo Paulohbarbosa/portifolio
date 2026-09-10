@@ -1,28 +1,30 @@
 [
   {
-    "name": "maxLength",
-    "expected": 0,
-    "actual": 8,
+    "name": "minScore",
+    "expected": 0.9,
+    "actual": null,
     "values": [
-      8
+      null
     ],
-    "operator": "<=",
+    "operator": ">=",
     "passed": false,
-    "auditId": "cache-insight",
-    "level": "warn",
+    "message": "Audit did not produce a value at all. \"minScore\" might not be a valid assertion for this audit.",
+    "auditId": "cls-culprits-insight",
+    "level": "error",
     "url": "http://localhost:3000/",
-    "auditTitle": "Use efficient cache lifetimes",
-    "auditDocumentationLink": "https://web.dev/uses-long-cache-ttl/"
+    "auditTitle": "Layout shift culprits",
+    "auditDocumentationLink": "https://web.dev/articles/optimize-cls"
   },
   {
     "name": "minScore",
     "expected": 0.9,
-    "actual": 0.5,
+    "actual": null,
     "values": [
-      0.5
+      null
     ],
     "operator": ">=",
     "passed": false,
+    "message": "Audit did not produce a value at all. \"minScore\" might not be a valid assertion for this audit.",
     "auditId": "document-latency-insight",
     "level": "error",
     "url": "http://localhost:3000/",
@@ -31,12 +33,13 @@
   {
     "name": "minScore",
     "expected": 0.9,
-    "actual": 0,
+    "actual": null,
     "values": [
-      0
+      null
     ],
     "operator": ">=",
     "passed": false,
+    "message": "Audit did not produce a value at all. \"minScore\" might not be a valid assertion for this audit.",
     "auditId": "dom-size-insight",
     "level": "warn",
     "url": "http://localhost:3000/",
@@ -46,9 +49,24 @@
   {
     "name": "minScore",
     "expected": 0.9,
-    "actual": 0.36,
+    "actual": null,
     "values": [
-      0.36
+      null
+    ],
+    "operator": ">=",
+    "passed": false,
+    "message": "Audit did not produce a value at all. \"minScore\" might not be a valid assertion for this audit.",
+    "auditId": "duplicated-javascript-insight",
+    "level": "error",
+    "url": "http://localhost:3000/",
+    "auditTitle": "Duplicated JavaScript"
+  },
+  {
+    "name": "minScore",
+    "expected": 0.9,
+    "actual": 0.59,
+    "values": [
+      0.59
     ],
     "operator": ">=",
     "passed": false,
@@ -61,17 +79,66 @@
   {
     "name": "minScore",
     "expected": 0.9,
-    "actual": 0.5,
+    "actual": null,
     "values": [
-      0.5
+      null
     ],
     "operator": ">=",
     "passed": false,
+    "message": "Audit did not produce a value at all. \"minScore\" might not be a valid assertion for this audit.",
+    "auditId": "font-display-insight",
+    "level": "error",
+    "url": "http://localhost:3000/",
+    "auditTitle": "Font display",
+    "auditDocumentationLink": "https://developer.chrome.com/blog/font-fallbacks"
+  },
+  {
+    "name": "minScore",
+    "expected": 0.9,
+    "actual": null,
+    "values": [
+      null
+    ],
+    "operator": ">=",
+    "passed": false,
+    "message": "Audit did not produce a value at all. \"minScore\" might not be a valid assertion for this audit.",
+    "auditId": "forced-reflow-insight",
+    "level": "error",
+    "url": "http://localhost:3000/",
+    "auditTitle": "Forced reflow",
+    "auditDocumentationLink": "https://developers.google.com/web/fundamentals/performance/rendering/avoid-large-complex-layouts-and-layout-thrashing#avoid-forced-synchronous-layouts"
+  },
+  {
+    "name": "minScore",
+    "expected": 0.9,
+    "actual": null,
+    "values": [
+      null
+    ],
+    "operator": ">=",
+    "passed": false,
+    "message": "Audit did not produce a value at all. \"minScore\" might not be a valid assertion for this audit.",
     "auditId": "image-delivery-insight",
     "level": "error",
     "url": "http://localhost:3000/",
     "auditTitle": "Improve image delivery",
     "auditDocumentationLink": "https://developer.chrome.com/docs/lighthouse/performance/uses-optimized-images/"
+  },
+  {
+    "name": "minScore",
+    "expected": 0.9,
+    "actual": null,
+    "values": [
+      null
+    ],
+    "operator": ">=",
+    "passed": false,
+    "message": "Audit did not produce a value at all. \"minScore\" might not be a valid assertion for this audit.",
+    "auditId": "interaction-to-next-paint-insight",
+    "level": "error",
+    "url": "http://localhost:3000/",
+    "auditTitle": "INP by phase",
+    "auditDocumentationLink": "https://web.dev/articles/optimize-inp#optimize_interactions"
   },
   {
     "name": "minScore",
@@ -91,9 +158,9 @@
   {
     "name": "minScore",
     "expected": 0.9,
-    "actual": 0.17,
+    "actual": 0.02,
     "values": [
-      0.17
+      0.02
     ],
     "operator": ">=",
     "passed": false,
@@ -106,12 +173,61 @@
   {
     "name": "minScore",
     "expected": 0.9,
-    "actual": 0,
+    "actual": null,
     "values": [
-      0
+      null
     ],
     "operator": ">=",
     "passed": false,
+    "message": "Audit did not produce a value at all. \"minScore\" might not be a valid assertion for this audit.",
+    "auditId": "lcp-discovery-insight",
+    "level": "error",
+    "url": "http://localhost:3000/",
+    "auditTitle": "LCP request discovery",
+    "auditDocumentationLink": "https://web.dev/articles/optimize-lcp#1_eliminate_resource_load_delay"
+  },
+  {
+    "name": "minScore",
+    "expected": 0.9,
+    "actual": null,
+    "values": [
+      null
+    ],
+    "operator": ">=",
+    "passed": false,
+    "message": "Audit did not produce a value at all. \"minScore\" might not be a valid assertion for this audit.",
+    "auditId": "lcp-lazy-loaded",
+    "level": "error",
+    "url": "http://localhost:3000/",
+    "auditTitle": "Largest Contentful Paint image was not lazily loaded",
+    "auditDocumentationLink": "https://web.dev/articles/lcp-lazy-loading"
+  },
+  {
+    "name": "minScore",
+    "expected": 0.9,
+    "actual": null,
+    "values": [
+      null
+    ],
+    "operator": ">=",
+    "passed": false,
+    "message": "Audit did not produce a value at all. \"minScore\" might not be a valid assertion for this audit.",
+    "auditId": "lcp-phases-insight",
+    "level": "error",
+    "url": "http://localhost:3000/",
+    "auditTitle": "LCP by phase",
+    "auditDocumentationLink": "https://web.dev/articles/optimize-lcp#lcp-breakdown"
+  },
+  {
+    "name": "minScore",
+    "expected": 0.9,
+    "actual": null,
+    "values": [
+      null
+    ],
+    "operator": ">=",
+    "passed": false,
+    "message": "Audit did not produce a value at all. \"minScore\" might not be a valid assertion for this audit.",
     "auditId": "legacy-javascript-insight",
     "level": "error",
     "url": "http://localhost:3000/",
@@ -121,9 +237,9 @@
   {
     "name": "maxLength",
     "expected": 0,
-    "actual": 2,
+    "actual": 3,
     "values": [
-      2
+      3
     ],
     "operator": "<=",
     "passed": false,
@@ -134,21 +250,6 @@
     "auditDocumentationLink": "https://web.dev/baseline"
   },
   {
-    "name": "maxLength",
-    "expected": 0,
-    "actual": 4,
-    "values": [
-      4
-    ],
-    "operator": "<=",
-    "passed": false,
-    "auditId": "modern-image-formats",
-    "level": "warn",
-    "url": "http://localhost:3000/",
-    "auditTitle": "Serve images in next-gen formats",
-    "auditDocumentationLink": "https://developer.chrome.com/docs/lighthouse/performance/uses-webp-images/"
-  },
-  {
     "name": "minScore",
     "expected": 0.9,
     "actual": 0,
@@ -157,6 +258,53 @@
     ],
     "operator": ">=",
     "passed": false,
+    "auditId": "mainthread-work-breakdown",
+    "level": "warn",
+    "url": "http://localhost:3000/",
+    "auditTitle": "Minimize main-thread work",
+    "auditDocumentationLink": "https://developer.chrome.com/docs/lighthouse/performance/mainthread-work-breakdown/"
+  },
+  {
+    "name": "minScore",
+    "expected": 0.9,
+    "actual": 0.7,
+    "values": [
+      0.7
+    ],
+    "operator": ">=",
+    "passed": false,
+    "auditId": "max-potential-fid",
+    "level": "warn",
+    "url": "http://localhost:3000/",
+    "auditTitle": "Max Potential First Input Delay",
+    "auditDocumentationLink": "https://developer.chrome.com/docs/lighthouse/performance/lighthouse-max-potential-fid/"
+  },
+  {
+    "name": "minScore",
+    "expected": 0.9,
+    "actual": null,
+    "values": [
+      null
+    ],
+    "operator": ">=",
+    "passed": false,
+    "message": "Audit did not produce a value at all. \"minScore\" might not be a valid assertion for this audit.",
+    "auditId": "modern-http-insight",
+    "level": "error",
+    "url": "http://localhost:3000/",
+    "auditTitle": "Modern HTTP",
+    "auditDocumentationLink": "https://developer.chrome.com/docs/lighthouse/best-practices/uses-http2/"
+  },
+  {
+    "name": "minScore",
+    "expected": 0.9,
+    "actual": null,
+    "values": [
+      null
+    ],
+    "operator": ">=",
+    "passed": false,
+    "message": "Audit did not produce a value at all. \"minScore\" might not be a valid assertion for this audit.",
     "auditId": "network-dependency-tree-insight",
     "level": "error",
     "url": "http://localhost:3000/",
@@ -164,64 +312,52 @@
     "auditDocumentationLink": "https://developer.chrome.com/docs/lighthouse/performance/critical-request-chains"
   },
   {
-    "name": "maxLength",
-    "expected": 0,
-    "actual": 1,
+    "name": "minScore",
+    "expected": 0.9,
+    "actual": null,
     "values": [
-      1
+      null
     ],
-    "operator": "<=",
+    "operator": ">=",
     "passed": false,
-    "auditId": "offscreen-images",
+    "message": "Audit did not produce a value at all. \"minScore\" might not be a valid assertion for this audit.",
+    "auditId": "non-composited-animations",
     "level": "error",
     "url": "http://localhost:3000/",
-    "auditTitle": "Defer offscreen images",
-    "auditDocumentationLink": "https://developer.chrome.com/docs/lighthouse/performance/offscreen-images/"
-  },
-  {
-    "name": "maxLength",
-    "expected": 0,
-    "actual": 2,
-    "values": [
-      2
-    ],
-    "operator": "<=",
-    "passed": false,
-    "auditId": "render-blocking-insight",
-    "level": "warn",
-    "url": "http://localhost:3000/",
-    "auditTitle": "Render blocking requests",
-    "auditDocumentationLink": "https://web.dev/learn/performance/understanding-the-critical-path#render-blocking_resources"
-  },
-  {
-    "name": "maxLength",
-    "expected": 0,
-    "actual": 2,
-    "values": [
-      2
-    ],
-    "operator": "<=",
-    "passed": false,
-    "auditId": "render-blocking-resources",
-    "level": "warn",
-    "url": "http://localhost:3000/",
-    "auditTitle": "Eliminate render-blocking resources",
-    "auditDocumentationLink": "https://developer.chrome.com/docs/lighthouse/performance/render-blocking-resources/"
+    "auditTitle": "Avoid non-composited animations",
+    "auditDocumentationLink": "https://developer.chrome.com/docs/lighthouse/performance/non-composited-animations/"
   },
   {
     "name": "minScore",
     "expected": 0.9,
-    "actual": 0.6,
+    "actual": null,
     "values": [
-      0.6
+      null
     ],
     "operator": ">=",
     "passed": false,
-    "auditId": "speed-index",
-    "level": "warn",
+    "message": "Audit did not produce a value at all. \"minScore\" might not be a valid assertion for this audit.",
+    "auditId": "prioritize-lcp-image",
+    "level": "error",
     "url": "http://localhost:3000/",
-    "auditTitle": "Speed Index",
-    "auditDocumentationLink": "https://developer.chrome.com/docs/lighthouse/performance/speed-index/"
+    "auditTitle": "Preload Largest Contentful Paint image",
+    "auditDocumentationLink": "https://web.dev/articles/optimize-lcp#optimize_when_the_resource_is_discovered"
+  },
+  {
+    "name": "minScore",
+    "expected": 0.9,
+    "actual": null,
+    "values": [
+      null
+    ],
+    "operator": ">=",
+    "passed": false,
+    "message": "Audit did not produce a value at all. \"minScore\" might not be a valid assertion for this audit.",
+    "auditId": "third-parties-insight",
+    "level": "error",
+    "url": "http://localhost:3000/",
+    "auditTitle": "3rd parties",
+    "auditDocumentationLink": "https://web.dev/articles/optimizing-content-efficiency-loading-third-party-javascript/"
   },
   {
     "name": "maxLength",
@@ -229,6 +365,21 @@
     "actual": 1,
     "values": [
       1
+    ],
+    "operator": "<=",
+    "passed": false,
+    "auditId": "unminified-css",
+    "level": "error",
+    "url": "http://localhost:3000/",
+    "auditTitle": "Minify CSS",
+    "auditDocumentationLink": "https://developer.chrome.com/docs/lighthouse/performance/unminified-css/"
+  },
+  {
+    "name": "maxLength",
+    "expected": 0,
+    "actual": 10,
+    "values": [
+      10
     ],
     "operator": "<=",
     "passed": false,
@@ -241,9 +392,9 @@
   {
     "name": "maxLength",
     "expected": 0,
-    "actual": 3,
+    "actual": 4,
     "values": [
-      3
+      4
     ],
     "operator": "<=",
     "passed": false,
@@ -256,9 +407,9 @@
   {
     "name": "maxLength",
     "expected": 0,
-    "actual": 8,
+    "actual": 7,
     "values": [
-      8
+      7
     ],
     "operator": "<=",
     "passed": false,
@@ -271,17 +422,17 @@
   {
     "name": "maxLength",
     "expected": 0,
-    "actual": 4,
+    "actual": 1,
     "values": [
-      4
+      1
     ],
     "operator": "<=",
     "passed": false,
-    "auditId": "uses-responsive-images",
+    "auditId": "uses-rel-preconnect",
     "level": "error",
     "url": "http://localhost:3000/",
-    "auditTitle": "Properly size images",
-    "auditDocumentationLink": "https://developer.chrome.com/docs/lighthouse/performance/uses-responsive-images/"
+    "auditTitle": "Preconnect to required origins",
+    "auditDocumentationLink": "https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/"
   },
   {
     "name": "maxLength",
@@ -301,9 +452,40 @@
   {
     "name": "minScore",
     "expected": 0.9,
-    "actual": 0.68,
+    "actual": 0,
     "values": [
-      0.68
+      0
+    ],
+    "operator": ">=",
+    "passed": false,
+    "auditId": "valid-source-maps",
+    "level": "error",
+    "url": "http://localhost:3000/",
+    "auditTitle": "Missing source maps for large first-party JavaScript",
+    "auditDocumentationLink": "https://developer.chrome.com/docs/devtools/javascript/source-maps/"
+  },
+  {
+    "name": "minScore",
+    "expected": 0.9,
+    "actual": null,
+    "values": [
+      null
+    ],
+    "operator": ">=",
+    "passed": false,
+    "message": "Audit did not produce a value at all. \"minScore\" might not be a valid assertion for this audit.",
+    "auditId": "viewport-insight",
+    "level": "error",
+    "url": "http://localhost:3000/",
+    "auditTitle": "Optimize viewport for mobile",
+    "auditDocumentationLink": "https://developer.chrome.com/blog/300ms-tap-delay-gone-away/"
+  },
+  {
+    "name": "minScore",
+    "expected": 0.9,
+    "actual": 0.38,
+    "values": [
+      0.38
     ],
     "operator": ">=",
     "passed": false,
