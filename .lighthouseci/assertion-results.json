@@ -2,6 +2,21 @@
   {
     "name": "minScore",
     "expected": 0.9,
+    "actual": 0,
+    "values": [
+      0
+    ],
+    "operator": ">=",
+    "passed": false,
+    "auditId": "bootup-time",
+    "level": "warn",
+    "url": "http://localhost:3000/",
+    "auditTitle": "Reduce JavaScript execution time",
+    "auditDocumentationLink": "https://developer.chrome.com/docs/lighthouse/performance/bootup-time/"
+  },
+  {
+    "name": "minScore",
+    "expected": 0.9,
     "actual": null,
     "values": [
       null
@@ -64,9 +79,9 @@
   {
     "name": "minScore",
     "expected": 0.9,
-    "actual": 0.59,
+    "actual": 0.62,
     "values": [
-      0.59
+      0.62
     ],
     "operator": ">=",
     "passed": false,
@@ -158,9 +173,9 @@
   {
     "name": "minScore",
     "expected": 0.9,
-    "actual": 0.02,
+    "actual": 0,
     "values": [
-      0.02
+      0
     ],
     "operator": ">=",
     "passed": false,
@@ -237,9 +252,9 @@
   {
     "name": "maxLength",
     "expected": 0,
-    "actual": 3,
+    "actual": 4,
     "values": [
-      3
+      4
     ],
     "operator": "<=",
     "passed": false,
@@ -267,9 +282,9 @@
   {
     "name": "minScore",
     "expected": 0.9,
-    "actual": 0.7,
+    "actual": 0.69,
     "values": [
-      0.7
+      0.69
     ],
     "operator": ">=",
     "passed": false,
@@ -346,6 +361,21 @@
   {
     "name": "minScore",
     "expected": 0.9,
+    "actual": 0,
+    "values": [
+      0
+    ],
+    "operator": ">=",
+    "passed": false,
+    "auditId": "server-response-time",
+    "level": "warn",
+    "url": "http://localhost:3000/",
+    "auditTitle": "Reduce initial server response time",
+    "auditDocumentationLink": "https://developer.chrome.com/docs/lighthouse/performance/time-to-first-byte/"
+  },
+  {
+    "name": "minScore",
+    "expected": 0.9,
     "actual": null,
     "values": [
       null
@@ -377,9 +407,9 @@
   {
     "name": "maxLength",
     "expected": 0,
-    "actual": 10,
+    "actual": 12,
     "values": [
-      10
+      12
     ],
     "operator": "<=",
     "passed": false,
@@ -483,9 +513,9 @@
   {
     "name": "minScore",
     "expected": 0.9,
-    "actual": 0.38,
+    "actual": 0.24,
     "values": [
-      0.38
+      0.24
     ],
     "operator": ">=",
     "passed": false,
