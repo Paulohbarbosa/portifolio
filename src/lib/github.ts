@@ -7,6 +7,7 @@ export interface GithubProject {
   year: string;
   badge: string;
   isFeatured: boolean;
+  topics?: string[];
 }
 
 export async function getGithubProjects(username: string): Promise<GithubProject[]> {
@@ -14,7 +15,7 @@ export async function getGithubProjects(username: string): Promise<GithubProject
     const res = await fetch(
       `https://api.github.com/search/repositories?q=user:${username}+topic:portfolio-project`,
       {
-        next: { revalidate: 10 },
+        next: { revalidate: 0 },
         headers: {
           Accept: "application/vnd.github.v3+json",
         },
@@ -142,6 +143,7 @@ export async function getGithubProjects(username: string): Promise<GithubProject
           year: new Date(repo.created_at).getFullYear().toString(),
           badge: institutionBadge,
           isFeatured: repo.stargazers_count > 0 || repo.topics.includes("featured"),
+          topics: repo.topics || [],
         };
       })
     );
