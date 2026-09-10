@@ -1,4 +1,3 @@
-import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
@@ -18,7 +17,6 @@ export default async function Home() {
   return (
     <>
       <ScrollObserver />
-      <SpeedInsights />
       <div className="bg-elements">
         <div className="glow glow-blue"></div>
         <div className="glow glow-purple"></div>
