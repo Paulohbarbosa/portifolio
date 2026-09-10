@@ -19,7 +19,7 @@
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-inter), sans-serif;
   background-color: var(--bg-color);
   color: var(--text-primary);
   line-height: 1.5;
@@ -78,7 +78,7 @@ body {
 
 /* Typography */
 .headline {
-  font-family: "Oswald", sans-serif;
+  font-family: var(--font-oswald), sans-serif;
   font-size: clamp(3rem, 6vw, 5rem);
   font-weight: 300;
   line-height: 1.1;

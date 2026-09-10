@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import data from "../data/portfolio.json";
 import { GithubProject } from "@/lib/github";
@@ -58,7 +59,15 @@ export default function Projects({ githubProjects = [] }: ProjectsProps) {
                   onClick={() => openModal(index)}
                 >
                   <div className="project-image">
-                    <img src={project.img} alt={project.title} />
+                    {/* Otimização Lighthouse: Imagens da lista de projetos com next/image.
+                        O uso do layout preenchido com 'fill' e 'objectFit: cover' melhora o CLS e a responsividade. */}
+                    <Image 
+                      src={project.img || '/placeholder.jpg'} 
+                      alt={project.title} 
+                      width={600}
+                      height={400}
+                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                    />
                     <div className="project-overlay"></div>
                   </div>
                   <div className="project-content">
@@ -92,8 +101,15 @@ export default function Projects({ githubProjects = [] }: ProjectsProps) {
 
           {currentProject && (
             <div className="modal-body">
-              <div className="modal-image-wrapper">
-                <img src={currentProject.img} alt="Project Image" />
+              <div className="modal-image-wrapper" style={{ overflow: 'hidden' }}>
+                {/* Otimização Lighthouse: Imagem do modal usando next/image. */}
+                <Image 
+                  src={currentProject.img || '/placeholder.jpg'} 
+                  alt="Project Image" 
+                  width={800}
+                  height={500}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                />
               </div>
               <div className="modal-info">
                 <div className="project-meta">

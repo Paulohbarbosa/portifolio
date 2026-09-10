@@ -1,3 +1,4 @@
+import Image from "next/image";
 import data from "@/data/portfolio.json";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -114,12 +115,18 @@ export default function Hero() {
         >
           <div className="photo-wrapper">
             <div className="photo-glow"></div>
-            <img
+            {/* Otimização Lighthouse: Usando next/image para otimização automática de imagens,
+                como WebP, lazy loading (se não for priority) e redimensionamento.
+                Adicionamos 'priority' por ser a imagem principal do Hero (LCP). */}
+            <Image
               src={data.personalInfo.photo}
               alt={
                 data.personalInfo.firstName + " " + data.personalInfo.lastName
               }
+              width={400}
+              height={400}
               className="profile-photo"
+              priority
             />
             {/* podemos automatizar esse ícones comforme que for adicionado novas tecnologias */}
             {data.heroIcons.map((icon) => (
@@ -131,7 +138,8 @@ export default function Hero() {
                   borderColor: `rgba(${icon.color}, 0.2)`,
                 }}
               >
-                <img
+                {/* Otimização Lighthouse: Imagens menores também ganham com next/image */}
+                <Image
                   src={
                     "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/" +
                     icon.icon +
@@ -140,6 +148,8 @@ export default function Hero() {
                     "-original.svg"
                   }
                   alt={icon.name}
+                  width={24}
+                  height={24}
                   style={{ width: "24px", height: "24px" }}
                 />
               </div>
