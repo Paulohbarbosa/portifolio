@@ -105,18 +105,6 @@
       "institution": "Universidade Estacio de Sá",
       "period": "2024 - 2026",
       "description": "Base sólida em algoritmos, estrutura de dados e engenharia de sistemas."
-    },
-    {
-      "title": "Especialização em Arq. Front-end e React",
-      "institution": "Rocketseat / Alura",
-      "period": "2021",
-      "description": "Foco em componentização, gerenciamento de estado global e clean code no front-end."
-    },
-    {
-      "title": "Masterclass em UI Engineering e Web Vitals",
-      "institution": "Google Developers / Udacity",
-      "period": "2022",
-      "description": "Treinamento avançado em otimização de renderização, métricas de performance e acessibilidade web."
     }
   ],
   "radarInfo": {
