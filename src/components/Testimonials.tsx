@@ -21,7 +21,7 @@ export default function Testimonials() {
               <p className="testimonial-quote">{report.text}</p>
               <div className="testimonial-author">
                 <div className="author-info">
-                  <span className="author-name">{report.name}</span>
+                  <h3 className="author-name">{report.name}</h3>
                   <span className="author-role">{report.role}</span>
                 </div>
               </div>
