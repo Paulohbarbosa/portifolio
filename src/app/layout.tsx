@@ -59,6 +59,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className={`${inter.variable} ${oswald.variable}`}>
       <head>
+        {/* Google tag (gtag.js) */}
         <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-WJ1MM7TELM"
