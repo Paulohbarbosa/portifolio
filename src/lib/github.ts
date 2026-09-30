@@ -15,7 +15,7 @@ export async function getGithubProjects(username: string): Promise<GithubProject
     const res = await fetch(
       `https://api.github.com/search/repositories?q=user:${username}+topic:portfolio-project`,
       {
-        next: { revalidate: 0 },
+        next: { revalidate: 3600 },
         headers: {
           Accept: "application/vnd.github.v3+json",
         },
