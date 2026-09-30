@@ -7,6 +7,7 @@ import { Inter, Oswald } from "next/font/google";
 import "./globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
+import Script from "next/script";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -60,11 +61,13 @@ export default function RootLayout({
     <html lang="pt-BR" className={`${inter.variable} ${oswald.variable}`}>
       <head>
         {/* Google tag (gtag.js) */}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-WJ1MM7TELM"
-        ></script>
-        <script
+        <Script
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=G-WJ1MM7TELM`}
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
@@ -74,7 +77,7 @@ export default function RootLayout({
               gtag('config', 'G-WJ1MM7TELM');
             `,
           }}
-        ></script>
+        />
       </head>
       <body>
         {children}
