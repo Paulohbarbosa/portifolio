@@ -58,6 +58,23 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR" className={`${inter.variable} ${oswald.variable}`}>
+      <head>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-WJ1MM7TELM"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+            
+              gtag('config', 'G-WJ1MM7TELM');
+            `,
+          }}
+        ></script>
+      </head>
       <body>
         {children}
         <SpeedInsights />
